@@ -1,6 +1,12 @@
 <ion-view view-title="Whatz The Move" hide-back-button="true">
-<ion-content class="padding-top">
-<!-- Repeated three times because of the array in the controller-->
+	<ion-nav-buttons side="left">
+		<button class="button back-button buttons button-clear header-item" ng-click="goBack()">
+			<i class="icon ion-ios-arrow-back"> Back</i>
+		</button>
+	</ion-nav-buttons>
+	
+	<ion-content class="padding-top">
+		<!-- Repeated three times because of the array in the controller-->
 
 
 
@@ -15,12 +21,11 @@
 		<div class="list card">
 
 			<a href="{{data.contact.web}}" class="item item-icon-left">
-				<i class="icon ion-earth"></i>
-				Visit website
+				<i class="icon ion-earth"></i> Visit website
 			</a>
 
 		</div>
 
 
-</ion-content>
+	</ion-content>
 </ion-view>

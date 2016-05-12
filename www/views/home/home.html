@@ -1,35 +1,42 @@
 <ion-view view-title="Whatz The Move" hide-back-button="true">
-<!-- Changed padding to 0 -->
+    <!-- Changed padding to 0 -->
+    <ion-nav-buttons side="left">
+        <button class="button back-button buttons button-clear header-item" ng-click="goBack()">
+			<i class="icon ion-ios-arrow-back"> Back</i>
+		</button>
+    </ion-nav-buttons>
 
-<ion-content class="padding-top">
-<!-- Repeated three times because of the array in the controller-->
-
-
-
-<!-- end wrapper div -->  
-<div  ng-repeat="i in data" class='wrapper'>
-    <!-- wrapper div -->  
-        <!-- add address of information here!!!! -->  
+    <ion-content class="padding-top">
+        <!-- Repeated three times because of the array in the controller-->
 
 
-    <!-- image -->  
-   <a href="#/information">
-        <img style="float:left; display:inline-block;overflow:hidden; border: 1px;" class ="fill_image" src='{{ i.picture }}' style width = "100%" style height = "100%" ng-click="disableClick('{{ i.firebase_url }}')"/>  
-    </a> 
-
-    <!-- description div -->  
-    <div class='description'>  
-        <!-- description content -->  
-        <p class='description_club_name' style="float: left">{{ i.title }}</p>  
-        <p class='description_club_name' style="float: right">Free</p>  
 
 
-        <!-- end description content -->  
-    </div>  
-    <!-- end description div -->  
+        <!-- end wrapper div -->
+        <div ng-repeat="i in data" class='wrapper'>
+            <!-- wrapper div -->
+            <!-- add address of information here!!!! -->
 
-</div> 
 
-<button ng-click="logOut()" class="button button-clear button-positive">Logout</button>
-</ion-content>
+            <!-- image -->
+            <a href="#/information">
+                <img style="float:left; display:inline-block;overflow:hidden; border: 1px;" class="fill_image" src='{{ i.picture }}' style
+                    width="100%" style height="100%" ng-click="disableClick('{{ i.firebase_url }}')" />
+            </a>
+
+            <!-- description div -->
+            <div class='description'>
+                <!-- description content -->
+                <p class='description_club_name' style="float: left">{{ i.title }}</p>
+                <p class='description_club_name' style="float: right">Free</p>
+
+
+                <!-- end description content -->
+            </div>
+            <!-- end description div -->
+
+        </div>
+
+        <button ng-click="logOut()" class="button button-clear button-positive">Logout</button>
+    </ion-content>
 </ion-view>
