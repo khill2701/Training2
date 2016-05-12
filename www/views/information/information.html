@@ -1,0 +1,38 @@
+<ion-view view-title="Whatz The Move" hide-back-button="true">
+<ion-content class="padding-top">
+<!-- Repeated three times because of the array in the controller-->
+
+
+		<li >{{ data.email }}</li>
+				<li >{{ data.id }}</li>
+				<li >{{ data.registered_in }}</li>
+
+		<div class="padding">
+			<h3>{{vm.property.title}}</h3>
+			<p>{{vm.property.description}}</p>
+			<h4>Address</h4>
+			<p>{{vm.property.address}}</p>
+		</div>
+
+		<div class="list card">
+			<a href="tel:{{vm.property.contact.phoneNumber}}" class="item item-icon-left">
+				<i class="icon ion-ios-telephone"></i>
+				Call us
+			</a>
+
+			<a class="item item-icon-left" ng-click="vm.sendEmail()">
+				<i class="icon ion-email"></i>
+				Email us
+			</a>
+
+			<a ng-click="vm.openWebsite()" class="item item-icon-left">
+				<i class="icon ion-earth"></i>
+				Visit our website
+			</a>
+
+		</div>
+
+
+<button ng-click="logOut()" class="button button-clear button-positive">{{data}}</button>
+</ion-content>
+</ion-view>
