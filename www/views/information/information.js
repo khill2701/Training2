@@ -9,10 +9,13 @@ angular.module('App').controller('informationController', function ($scope, $sta
 
   ] };
 
-// Get a reference to our posts
-var ref = new Firebase("https://resplendent-inferno-4023.firebaseio.com/profile/-KGckDIv5iu6WbHNC5ic");
+//to storedata
+ var hey = localStorage.getItem('labelz');
+console.log(hey);
 
-debugger;
+// Get a reference to our posts
+var ref = new Firebase("https://boiling-torch-5034.firebaseio.com/properties/09b3d83d-dc9d-4662-9d40-34889eb85ed1");
+
 /*Three-way data bindings are amazing for simple key / value data. However, there are many times when an array would be more practical, such as when managing a collection of messages. This is done using the $firebaseArray service.
 
 We synchronize a list of messages into a read-only array by using the $firebaseArray service and then assigning the array to $scope:
@@ -25,11 +28,12 @@ We synchronize a list of messages into a read-only array by using the $firebaseA
   // click on `index.html` above to see it used in the DOM!
   syncObject.$bindTo($scope, "data");
 
+    $scope.redirectToGoogle = function () {
+        $window.open('https://www.google.com', '_blank');
+    };
 
 
-//to storedata
- var hey = localStorage.getItem('label2');
-console.log(hey);
+
 
 
 }

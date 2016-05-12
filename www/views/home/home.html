@@ -11,11 +11,10 @@
     <!-- wrapper div -->  
         <!-- add address of information here!!!! -->  
 
-            <p class='description_club_name' style="float: left">{{ data }}</p>  
 
     <!-- image -->  
    <a href="#/information">
-        <img style="float:left; display:inline-block;overflow:hidden; border: 1px;" class ="fill_image" src='{{ i.picture }}' style width = "100%" style height = "100%"/>  
+        <img style="float:left; display:inline-block;overflow:hidden; border: 1px;" class ="fill_image" src='{{ i.picture }}' style width = "100%" style height = "100%" ng-click="disableClick('{{ i.firebase_url }}')"/>  
     </a> 
 
     <!-- description div -->  
