@@ -4,7 +4,7 @@
 			<i class="icon ion-ios-arrow-back"> </i>
 		</button>
 	</ion-nav-buttons>
-	
+
 	<ion-content class="padding-top">
 		<!-- Repeated three times because of the array in the controller-->
 
@@ -13,15 +13,26 @@
 
 		<div class="padding">
 			<h3>{{data.title}}</h3>
-			<p>{{data.description}}</p>
+			<pre><pan class="inner-pre" style="font-size: 18px"><font face="times new roman">{{data.description}}</font></span></pre>
 			<h4>{{data.address}}</h4>
-			<p>{{vm.property.address}}</p>
 		</div>
 
 		<div class="list card">
 
 			<a href="{{data.contact.web}}" class="item item-icon-left">
 				<i class="icon ion-earth"></i> Visit website
+			</a>
+			<br>
+			<h4 style="center">Weekly Deals!</h4>
+
+			<a href="#/weekly_deals" class="item item-icon-left">
+				<i class="icon ion-social-usd"></i> Thursday
+			</a>
+			<a href="#/home" class="item item-icon-left">
+				<i class="icon ion-social-usd"></i> Friday
+			</a>
+			<a href="#/home" class="item item-icon-left">
+				<i class="icon ion-social-usd"></i> Saturday
 			</a>
 
 		</div>
