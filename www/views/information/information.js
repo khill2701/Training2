@@ -38,7 +38,6 @@ angular.module('App').controller('informationController', function ($scope, $sta
     $ionicHistory.goBack();
   }
   $scope.deal_date = function (date) {
-    debugger;
     localStorage.setItem('deal_date', date);
 
   }
