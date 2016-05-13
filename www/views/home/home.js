@@ -6,7 +6,7 @@ angular.module('App').controller('homeController', function ($scope, $state, $co
     // Get a reference to our posts
     var ref = new Firebase("https://boiling-torch-5034.firebaseio.com/properties");
 
-    debugger;
+    
     /*Three-way data bindings are amazing for simple key / value data. However, there are many times when an array would be more practical, such as when managing a collection of messages. This is done using the $firebaseArray service.
     
     We synchronize a list of messages into a read-only array by using the $firebaseArray service and then assigning the array to $scope:
@@ -15,6 +15,7 @@ angular.module('App').controller('homeController', function ($scope, $state, $co
 
 
     $scope.disableClick = function (n) {
+        debugger;
         localStorage.setItem('labelz', n);
 
     }

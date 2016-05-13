@@ -11,11 +11,11 @@ angular.module('App').controller('weekly_dealsController', function ($scope, $st
   };
 
   //to storedata
-  var hey = localStorage.getItem('labelz');
+  var hey = localStorage.getItem('deal_date');
   console.log(hey);
 
   // Get a reference to our posts
-  var ref = new Firebase("https://boiling-torch-5034.firebaseio.com/properties/09b3d83d-dc9d-4662-9d40-34889eb85ed1");
+  var ref = new Firebase("https://boiling-torch-5034.firebaseio.com/properties/09b3d83d-dc9d-4662-9d40-34889eb85ed1/deals/" + hey);
 
   /*Three-way data bindings are amazing for simple key / value data. However, there are many times when an array would be more practical, such as when managing a collection of messages. This is done using the $firebaseArray service.
   
@@ -32,8 +32,9 @@ angular.module('App').controller('weekly_dealsController', function ($scope, $st
   $scope.redirectToGoogle = function () {
     $window.open('https://www.google.com', '_blank');
   };
-  
+
   $scope.goBack = function () {
+    localStorage.clear();
     $ionicHistory.goBack();
   }
 
