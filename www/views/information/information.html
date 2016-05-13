@@ -1,38 +1,42 @@
 <ion-view view-title="Whatz The Move" hide-back-button="true">
-<ion-content class="padding-top">
-<!-- Repeated three times because of the array in the controller-->
+	<ion-nav-buttons side="left">
+		<button class="button back-button buttons button-clear header-item" ng-click="goBack()">
+			<i class="icon ion-ios-arrow-back"> </i>
+		</button>
+	</ion-nav-buttons>
+
+	<ion-content class="padding-top">
+		<!-- Repeated three times because of the array in the controller-->
 
 
-		<li >{{ data.email }}</li>
-				<li >{{ data.id }}</li>
-				<li >{{ data.registered_in }}</li>
+
 
 		<div class="padding">
-			<h3>{{vm.property.title}}</h3>
-			<p>{{vm.property.description}}</p>
-			<h4>Address</h4>
-			<p>{{vm.property.address}}</p>
+			<h3>{{data.title}}</h3>
+			<pre><pan class="inner-pre" style="font-size: 18px"><font face="times new roman">{{data.description}}</font></span></pre>
+			<h4>{{data.address}}</h4>
 		</div>
 
 		<div class="list card">
-			<a href="tel:{{vm.property.contact.phoneNumber}}" class="item item-icon-left">
-				<i class="icon ion-ios-telephone"></i>
-				Call us
-			</a>
 
-			<a class="item item-icon-left" ng-click="vm.sendEmail()">
-				<i class="icon ion-email"></i>
-				Email us
+			<a href="{{data.contact.web}}" class="item item-icon-left">
+				<i class="icon ion-earth"></i> Visit website
 			</a>
+			<br>
+			<h4 style="center">Weekly Deals!</h4>
 
-			<a ng-click="vm.openWebsite()" class="item item-icon-left">
-				<i class="icon ion-earth"></i>
-				Visit our website
+			<a href="#/weekly_deals" class="item item-icon-left"  ng-click="deal_date('thursday')">
+				<i class="icon ion-social-usd"></i> Thursday
+			</a>
+			<a href="#/weekly_deals" class="item item-icon-left" ng-click="deal_date('friday')">
+				<i class="icon ion-social-usd"></i> Friday
+			</a>
+			<a href="#/weekly_deals" class="item item-icon-left" ng-click="deal_date('saturday')">
+				<i class="icon ion-social-usd"></i> Saturday
 			</a>
 
 		</div>
 
 
-<button ng-click="logOut()" class="button button-clear button-positive">{{data}}</button>
-</ion-content>
+	</ion-content>
 </ion-view>

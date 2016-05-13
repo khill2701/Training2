@@ -22,6 +22,11 @@ $stateProvider
       templateUrl: 'views/information/information.html',
       controller:'informationController'
     })
+    .state('weekly_deals', {
+      url: '/weekly_deals',
+      templateUrl: 'views/weekly_deals/weekly_deals.html',
+      controller:'weekly_dealsController'
+    })
     .state('home', {
       url: '/home',
       templateUrl: 'views/home/home.html',

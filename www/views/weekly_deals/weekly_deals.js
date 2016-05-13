@@ -1,5 +1,5 @@
 'use strict';
-angular.module('App').controller('informationController', function ($scope, $state, $cordovaOauth, $localStorage, $firebaseArray, $location, $http, $ionicPopup, $firebaseObject, Auth, FURL, Utils, $ionicHistory) {
+angular.module('App').controller('weekly_dealsController', function ($scope, $state, $cordovaOauth, $localStorage, $firebaseArray, $location, $http, $ionicPopup, $firebaseObject, Auth, FURL, Utils, $ionicHistory) {
   var ref = new Firebase(FURL);
   $scope.product = {
     "images": [
@@ -11,11 +11,11 @@ angular.module('App').controller('informationController', function ($scope, $sta
   };
 
   //to storedata
-  var hey = localStorage.getItem('labelz');
+  var hey = localStorage.getItem('deal_date');
   console.log(hey);
 
   // Get a reference to our posts
-  var ref = new Firebase(hey);
+  var ref = new Firebase("https://boiling-torch-5034.firebaseio.com/properties/09b3d83d-dc9d-4662-9d40-34889eb85ed1/deals/" + hey);
 
   /*Three-way data bindings are amazing for simple key / value data. However, there are many times when an array would be more practical, such as when managing a collection of messages. This is done using the $firebaseArray service.
   
@@ -36,10 +36,6 @@ angular.module('App').controller('informationController', function ($scope, $sta
   $scope.goBack = function () {
     localStorage.clear();
     $ionicHistory.goBack();
-  }
-  $scope.deal_date = function (date) {
-    localStorage.setItem('deal_date', date);
-
   }
 
 
