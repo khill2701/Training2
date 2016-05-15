@@ -1,5 +1,5 @@
 'use strict';
-angular.module('App').controller('homeController', function ($scope, $state, $cordovaOauth, $localStorage, $firebaseArray, $location, $http, $ionicPopup, $firebaseObject, Auth, FURL, Utils, $ionicHistory) {
+angular.module('App').controller('homeController', function ($scope, $state, $ionicSideMenuDelegate, $cordovaOauth, $localStorage, $firebaseArray, $location, $http, $ionicPopup, $firebaseObject, Auth, FURL, Utils, $ionicHistory) {
     var ref = new Firebase(FURL);
     $scope.product;
 
@@ -28,6 +28,11 @@ angular.module('App').controller('homeController', function ($scope, $state, $co
 
   		$scope.goBack = function () {
         $ionicHistory.goBack();
+    }
+        $scope.openMenu = function() {
+        $location.path('/menu')
+       
+        
     }
 
 }

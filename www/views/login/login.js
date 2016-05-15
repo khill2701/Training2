@@ -1,5 +1,6 @@
 'Use Strict';
-angular.module('App').controller('loginController', function ($scope, $state,$cordovaOauth, $localStorage, $location,$http,$ionicPopup, $firebaseObject, Auth, FURL, Utils) {
+angular.module('App').controller('loginController', function ($scope, $state,$cordovaOauth, $localStorage, $location,$http,$ionicPopup, $firebaseObject, $window, Auth, FURL, Utils) {
+  
   var ref = new Firebase(FURL);
   var userkey = "";
   debugger;
@@ -22,10 +23,11 @@ angular.module('App').controller('loginController', function ($scope, $state,$co
             //console.log(obj.email);
             $localStorage.email = obj.email;
             $localStorage.userkey = userkey;
-
+             delete userkey;
               Utils.hide();
               $state.go('home');
               console.log("Starter page","Home");
+          
 
           })
           .catch(function(error) {
