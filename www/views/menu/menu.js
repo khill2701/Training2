@@ -8,12 +8,17 @@ angular.module('App').controller('menuController', function ($scope, $ionicHisto
   $scope.openClubs = function () {
     $location.path('/clubs');
   }
+  
   $scope.openFavorites = function () {
     $location.path('/favorites');
   }
+  
+  $scope.openAllMoves = function () {
+    $location.path('/home');
+  }
 
   $scope.openBars = function () {
-    
+
     localStorage.setItem('tag', 'rap');
 
     $location.path('/bars');
