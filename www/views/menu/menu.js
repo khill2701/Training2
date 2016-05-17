@@ -5,10 +5,22 @@ angular.module('App').controller('menuController', function ($scope, $ionicHisto
     $location.path('/home');
  
   }
+ $scope.openClubs = function () {
+   $location.path('/clubs');
+ }
+  $scope.openFavorites = function () {
+   $location.path('/favorites');
+ }
+    
+   $scope.openBars = function () {
+        $location.path('/bars');
+  }
+  
    $scope.logOut = function () {
         Auth.logout();
-        $location.path("/login");
+        $location.path('/login');
     } 
+   
   $scope.moveItem = function(item, fromIndex, toIndex) {
     $scope.items.splice(fromIndex, 1);
     $scope.items.splice(toIndex, 0, item);

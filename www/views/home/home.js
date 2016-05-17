@@ -30,10 +30,9 @@ angular.module('App').controller('homeController', function ($scope, $state, $io
         $ionicHistory.goBack();
     }
         $scope.openMenu = function() {
-        $location.path('/menu')
-       
-        
+        $location.path('/menu');   
     }
+        
 
 }
 );
