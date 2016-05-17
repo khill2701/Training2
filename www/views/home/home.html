@@ -1,6 +1,13 @@
 <ion-view view-title="Whatz The Move" hide-back-button="true">
     <!-- Changed padding to 0 -->
     
+    <ion-nav-buttons side="left">
+        <button menu-toggle="right" class="button button-icon icon ion-navicon" ng-click="openMenu()">
+        </button>
+    </ion-nav-buttons>
+    
+    
+    
 
     <ion-content class="padding-top">
         <!-- Repeated three times because of the array in the controller-->
@@ -33,6 +40,7 @@
 
         </div>
 
-        <button ng-click="logOut()" class="button button-clear button-positive">Logout</button>
+       
     </ion-content>
 </ion-view>
+

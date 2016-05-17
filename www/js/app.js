@@ -2,6 +2,11 @@
 angular.module('App', ['ionic','ngStorage', 'ngCordova','firebase','ngMessages'])
 .config(function($stateProvider, $urlRouterProvider) {
 $stateProvider
+    .state('menu', {
+      url: '/menu',
+      templateUrl: 'views/menu/menu.html',
+      controller:'menuController'
+    })
     .state('login', {
       url: '/login',
       templateUrl: 'views/login/login.html',
