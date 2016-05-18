@@ -1,7 +1,10 @@
 'use strict';
-angular.module('App').controller('homeController', function ($scope, $state, $cordovaOauth, $localStorage, $firebaseArray, $location, $http, $ionicPopup, $firebaseObject, Auth, FURL, Utils, $ionicHistory) {
+angular.module('App').controller('homeController', function ($scope, $state, $ionicSideMenuDelegate, $cordovaOauth, $localStorage, $firebaseArray, $location, $http, $ionicPopup, $firebaseObject, Auth, FURL, Utils, $ionicHistory) {
     var ref = new Firebase(FURL);
     $scope.product;
+    debugger;
+    $scope.tag= localStorage.getItem('tag');
+
 
     // Get a reference to our posts
     var ref = new Firebase("https://boiling-torch-5034.firebaseio.com/properties");
@@ -13,9 +16,7 @@ angular.module('App').controller('homeController', function ($scope, $state, $co
     */
     $scope.data = $firebaseArray(ref);
 
-
     $scope.disableClick = function (n) {
-        debugger;
         localStorage.setItem('labelz', n);
 
     }
@@ -29,6 +30,10 @@ angular.module('App').controller('homeController', function ($scope, $state, $co
   		$scope.goBack = function () {
         $ionicHistory.goBack();
     }
+        $scope.openMenu = function() {
+        $location.path('/menu');   
+    }
+        
 
 }
 );

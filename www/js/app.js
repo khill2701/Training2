@@ -2,6 +2,26 @@
 angular.module('App', ['ionic','ngStorage', 'ngCordova','firebase','ngMessages'])
 .config(function($stateProvider, $urlRouterProvider) {
 $stateProvider
+    .state('favorites', {
+      url: '/favorites',
+      templateUrl: 'views/favorites/favorites.html',
+      controller: 'favoritesController'
+    })
+    .state('clubs', {
+      url: '/clubs',
+      templateUrl: 'views/clubs/clubs.html',
+      controller: 'clubsController'
+    })
+    .state('bars', {
+      url: '/bars',
+      templateUrl: 'views/bars/bars.html',
+      controller: 'barsController'
+    })
+    .state('menu', {
+      url: '/menu',
+      templateUrl: 'views/menu/menu.html',
+      controller:'menuController'
+    })
     .state('login', {
       url: '/login',
       templateUrl: 'views/login/login.html',
