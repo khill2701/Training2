@@ -1,12 +1,18 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
-<ion-view view-title="Whatz The Move" hide-back-button="true" class="backgroundColor">
+<ion-view title="Clubs" hide-back-button="true" class="backgroundColor">
 =======
-<ion-view view-title="All Moves" hide-back-button="true" style="background-color: lightgray;">
->>>>>>> origin/master
-=======
-<ion-view view-title="Whatz The Move" hide-back-button="true" style="background-color: lightgray;">
+<ion-view title="Clubs" hide-back-button="true">
 >>>>>>> parent of ce396ab... Added CSS Background color and borders
+	<ion-nav-buttons side="left">
+		<button menu-toggle="left" class="button back-button buttons button-clear header-item" ng-click="goBack()">
+			<i class="icon ion-ios-arrow-back"></i>
+		</button>	
+	</ion-nav-buttons>
+    
+    
+=======
+<ion-view view-title="Clubs" hide-back-button="true" style="background-color: lightgray;">
     <!-- Changed padding to 0 -->
 
     <ion-nav-buttons side="left">
@@ -24,7 +30,7 @@
 
 
         <!-- end wrapper div -->
-        <div ng-repeat="i in data " class='wrapper'>
+        <div ng-repeat="i in data | filter: { tags: 'rap' }" class='wrapper'>
             <!-- wrapper div -->
             <!-- add address of information here!!!! -->
 
@@ -50,4 +56,5 @@
 
 
     </ion-content>
+>>>>>>> origin/master
 </ion-view>
