@@ -1,13 +1,18 @@
 /* Empty. Add your own CSS if you like */
 
-.backgroundColor {
-           background-color: lightgrey;
-       }
 
- ion-item {     
+
+
+
+.backgroundColor {
+           /**background-color: lightgrey;**/
+           background: url(../img/backgroundColor.png);
+           }
+
+ ion-item {               
            font-weight: bold;
            font-style: italic;
-       }
+           }
 
 .larger {
            font-size: 120px;

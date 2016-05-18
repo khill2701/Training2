@@ -1,10 +1,35 @@
-<ion-view view-title="Whatz The Move" hide-back-button="true">
+<ion-view view-title="Whatz The Move" hide-back-button="true" class="backgroundColor">
 	<ion-nav-buttons side="left">
 		<button class="button back-button buttons button-clear header-item" ng-click="goBack()">
 			<i class="icon ion-ios-arrow-back"> </i>
 		</button>
 	</ion-nav-buttons>
-
+	<style>
+		.change {
+			border-radius: 12px;
+			border: 2px;
+			/*box-shadow:0 4px 8px 0 red, 0 0 0 3px blue;*/
+			box-shadow:0 4px 8px 0 blue, 0 0 0 3px red;
+			background-color: black;
+			color: white;
+			opacity: 0.7;
+			text-align: center;
+			margin-left: 30px;
+			margin-right: 30px;
+		}
+		.addressStyle{
+			border-radius: 12px;
+			border: 2px;
+			/*box-shadow:0 4px 8px 0 red, 0 0 0 3px blue;*/
+			box-shadow:0 4px 8px 0 blue, 0 0 0 3px red;
+			background-color: black;
+			color: white;
+			opacity: 0.7;
+			text-align: center;
+			margin-left: 30px;
+			margin-right: 30px;
+		}
+	</style>
 	<ion-content class="padding-top">
 		<!-- Repeated three times because of the array in the controller-->
 
@@ -13,8 +38,12 @@
 
 		<div class="padding">
 			<h3>{{data.title}}</h3>
+			<h3>Description:</h3>
+			<div class="change">
 			<pre><pan class="inner-pre" style="font-size: 18px"><font face="times new roman">{{data.description}}</font></span></pre>
-			<h4>{{data.address}}</h4>
+			</div>
+			<h3>Address:</h3>
+			<h4 class="addressStyle">{{data.address}}</h4>
 		</div>
 
 		<div class="list card">
