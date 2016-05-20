@@ -42,7 +42,6 @@ angular.module('App').controller('informationController', function ($scope, $sta
 
 
   $scope.favorites = function (yo) {
-    debugger;
     // retrieve it (Or create a blank array if there isn't any info saved yet),
     var favorites = JSON.parse(localStorage.getItem('favoritesInfo')) || [];
     var word = yo;
@@ -62,7 +61,6 @@ angular.module('App').controller('informationController', function ($scope, $sta
 
     for (var i = favorites.length - 1; i >= 0; i--) {
       if (favorites[i] === yo) {
-            debugger;
 
         favorites.splice(i,1);
         console.log("Yoooo");
