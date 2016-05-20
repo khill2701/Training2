@@ -1,14 +1,10 @@
-<ion-view view-title="Bars" hide-back-button="true" style="background-color: lightgray;">
-    <!-- Changed padding to 0 -->
+<ion-view title="Bars" hide-back-button="true" class="backgroundColor">
 
-    <ion-nav-buttons side="left">
-        <button menu-toggle="right" class="button button-icon icon ion-navicon" ng-click="openMenu()">
-        </button>
-    </ion-nav-buttons>
-
-
-
-
+	<ion-nav-buttons side="left">
+		<button menu-toggle="left" class="button back-button buttons button-clear header-item" ng-click="goBack()">
+			<i class="icon ion-ios-arrow-back"></i>
+		</button>	
+	</ion-nav-buttons>
     <ion-content class="padding-top">
         <!-- Repeated three times because of the array in the controller-->
 
@@ -42,4 +38,5 @@
 
 
     </ion-content>
+
 </ion-view>

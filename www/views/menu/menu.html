@@ -3,25 +3,48 @@
     <link href="css/backgroundColors.css " rel="stylesheet ">
 	<ion-nav-buttons side="left ">
 		<button menu-toggle="right " class="button back-button buttons button-clear header-item " ng-click="goBack() ">
-			<i class="icon ion-ios-arrow-back "> </i>
+			<i class="icon ion-ios-arrow-back"> </i>
 		</button>
 	</ion-nav-buttons>
      <style>
-      
+
+       ion-item[class] {
+           border-radius: 12px;
+           opacity: 0.7;
+           margin-top: 10px;
+           margin-bottom: 20px;
+            margin-right: 50px;
+            margin-left: 10px;
+            padding-right: 300px;
+       }
+
      </style>
     <ion-content>
 
       <!-- The list directive is great, but be sure to also checkout the collection repeat directive when scrolling through large lists -->
       
+
+          
+
+       
+
       <ion-list show-delete="data.showDelete " show-reorder="data.showReorder ">
           
         <ion-item class="item-icon-left " ng-click="openBars() "> 
+
         Bars
         <div class="icon ">
                <span class=" ion-beer "> </span>           
         </div>
         </ion-item>
+
+         
+
+         
+
+        
         <ion-item ng-click="openClubs() " class="item-icon-left ">
+
             Clubs
             <div class="icon ">
                 <span class="ion-disc "></span>
@@ -52,6 +75,7 @@
             <div class="icon ">
                 <span class="ion-power ">
         </ion-item>
+
 
       </ion-list>
 
