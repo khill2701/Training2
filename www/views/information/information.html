@@ -9,7 +9,7 @@
 			border-radius: 12px;
 			border: 2px;
 			/*box-shadow:0 4px 8px 0 red, 0 0 0 3px blue;*/
-			box-shadow:0 4px 8px 0 blue, 0 0 0 3px red;
+			box-shadow:0 4px 8px 0 blue, 0 0 0 3px lightblue;
 			background-color: black;
 			color: white;
 			opacity: 0.7;
@@ -21,7 +21,7 @@
 			border-radius: 12px;
 			border: 2px;
 			/*box-shadow:0 4px 8px 0 red, 0 0 0 3px blue;*/
-			box-shadow:0 4px 8px 0 blue, 0 0 0 3px red;
+			box-shadow:0 4px 8px 0 blue, 0 0 0 3px lightblue;
 			background-color: black;
 			color: white;
 			opacity: 0.7;
@@ -37,35 +37,37 @@
 
 
 		<div class="padding">
-			<h3>{{data.title}}</h3>
-			<h3>Description:</h3>
+			<h3 style="color:white;">{{data.title}}</h3>
+			<h3 style="color:white;">Description:</h3>
 			<div class="change">
 			<pre><pan class="inner-pre" style="font-size: 18px"><font face="times new roman">{{data.description}}</font></span></pre>
 			</div>
-			<h3>Address:</h3>
+			<h3 style="color:white;">Address:</h3>
 			<h4 class="addressStyle">{{data.address}}</h4>
 		</div>
-
-		<div class="list card">
-
-			<a href="{{data.contact.web}}" class="item item-icon-left">
-				<i class="icon ion-earth"></i> Visit website
-			</a>
-			<br>
-			<h4 style="center">Weekly Deals!</h4>
-
+		<br>
+		<h3 style="color:white;">
+		 
+			Weekly Deals
+			<i class="ion-flame assertive"></i>
+		</h3>
+		
+		
+		<div class="list card" style="border-radius:15px">
 			<a href="#/weekly_deals" class="item item-icon-left"  ng-click="deal_date('thursday')">
 				<i class="icon ion-social-usd"></i> Thursday
 			</a>
 			<a href="#/weekly_deals" class="item item-icon-left" ng-click="deal_date('friday')">
-				<i class="icon ion-social-usd"></i> Friday
+				<i class="icon ion-social-usd balanced"></i> Friday
 			</a>
 			<a href="#/weekly_deals" class="item item-icon-left" ng-click="deal_date('saturday')">
 				<i class="icon ion-social-usd"></i> Saturday
 			</a>
 
 		</div>
-
+		<a  href="{{data.contact.web}}" onclick="window.open('{{data.contact.web}}', '_blank', 'location=yes'); return false;" class="item item-icon-left">
+				<i class="icon ion-earth"></i> Visit website
+			</a>	
 
 	</ion-content>
 </ion-view>
