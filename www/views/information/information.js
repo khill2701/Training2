@@ -9,7 +9,6 @@ angular.module('App').controller('informationController', function ($scope, $sta
 
     ]
   };
-
   //to storedata
   var hey = localStorage.getItem('labelz');
   console.log(hey);
@@ -47,25 +46,43 @@ angular.module('App').controller('informationController', function ($scope, $sta
     var favorites = JSON.parse(localStorage.getItem('favoritesInfo')) || [];
     var word = yo;
     //  returns -1 if it is not found, so you can add it then.
-if (favorites.indexOf(yo) == -1) {
-    favorites.push(yo);
-}
-//favorites.pop();
+    if (favorites.indexOf(yo) == -1) {
+      favorites.push(yo);
+    }
+    //favorites.pop();
     localStorage.setItem('favoritesInfo', JSON.stringify(favorites));
+    console.log(localStorage.getItem('favoritesInfo'));
+  }
+
+  $scope.removeFavorites = function (yo) {
+    // retrieve it (Or create a blank array if there isn't any info saved yet),
+    var favorites = JSON.parse(localStorage.getItem('favoritesInfo')) || [];
+    var word = yo;
+
+    for (var i = favorites.length - 1; i >= 0; i--) {
+      if (favorites[i] === yo) {
+
+        favorites.splice(i,1);
+        console.log("Yoooo");
+
+        console.log(favorites[i]);
+      }
+    }
+    //favorites.pop();
+     localStorage.setItem('favoritesInfo', JSON.stringify(favorites));
     console.log(localStorage.getItem('favoritesInfo'));
   }
 
   $scope.searchFavorites = function (yo) {
     // retrieve it (Or create a blank array if there isn't any info saved yet),
+    // retrieve it (Or create a blank array if there isn't any info saved yet),
     var favorites = JSON.parse(localStorage.getItem('favoritesInfo')) || [];
     var word = yo;
-    // Iterate every array item
-    for (var index = 0; index < favorites.length; index++) {
-      // If current array item equals itemToRemove then
-      if (favorites[index] === "Lucky 13's") {
-        return true;
-      }
+    //returns -1 if it is not found, so you can add it then.
+    if (favorites.indexOf(yo) == -1) {
+      return false;
     }
+    console.log(localStorage.getItem('favoritesInfo'));
     return true;
 
   }

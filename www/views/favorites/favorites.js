@@ -2,45 +2,27 @@
 angular.module('App').controller('favoritesController', function ($scope, $state, $ionicSideMenuDelegate, $cordovaOauth, $localStorage, $firebaseArray, $location, $http, $ionicPopup, $firebaseObject, Auth, FURL, Utils, $ionicHistory) {
     var ref = new Firebase(FURL);
     $scope.product;
-    $scope.tag= localStorage.getItem('tag');
 
 
     // Get a reference to our posts
     var ref = new Firebase("https://boiling-torch-5034.firebaseio.com/properties");
 
-    
+
     /*Three-way data bindings are amazing for simple key / value data. However, there are many times when an array would be more practical, such as when managing a collection of messages. This is done using the $firebaseArray service.
     
     We synchronize a list of messages into a read-only array by using the $firebaseArray service and then assigning the array to $scope:
     */
+    $scope.words = localStorage.getItem('favoritesInfo');
     $scope.data = $firebaseArray(ref);
 
+    $scope.containsComparator = function (expected, actual) {
+        return actual.indexOf(expected) > -1;
+    };
     $scope.disableClick = function (n) {
         localStorage.setItem('labelz', n);
 
     }
-  $scope.deleteFavorite = function (yo) {
-    // retrieve it (Or create a blank array if there isn't any info saved yet),
-    var favorites = JSON.parse(localStorage.getItem('favoritesInfo')) || [];
-    var word = yo;
 
-    // Iterate every array item
-    for (var index = 0; index < favorites.length; index++) {
-      // If current array item equals itemToRemove then
-      if (favorites[index] === "Lucky 13's") {
-        // Remove array item at current index
-        favorites.splice(index, 1);
-
-
-        // Decrement index to iterate current position 
-        // one more time, because we just removed item 
-        // that occupies it, and next item took it place
-        index--;
-      }
-    }
-    localStorage.setItem('favoritesInfo', JSON.stringify(favorites));
-    console.log(localStorage.getItem('favoritesInfo'));
-  }
 
     $scope.logOut = function () {
         Auth.logout();
@@ -50,10 +32,10 @@ angular.module('App').controller('favoritesController', function ($scope, $state
   		$scope.goBack = function () {
         $ionicHistory.goBack();
     }
-        $scope.openMenu = function() {
-        $location.path('/menu');   
+    $scope.openMenu = function () {
+        $location.path('/menu');
     }
-        
+
 
 }
 );
