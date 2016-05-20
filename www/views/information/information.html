@@ -22,10 +22,15 @@
 			<a href="{{data.contact.web}}" class="item item-icon-left">
 				<i class="icon ion-earth"></i> Visit website
 			</a>
+			<a class="item item-icon-left" ng-click="favorites(data.title);main.show_list = 'friends';" ng-class="{'active': main.show_list === 'friends'}">
+				<i class="icon ion-ios-star-outline" ng-class="main.show_list === 'friends' ? 'icon ion-ios-star' : 'icon ion-ios-star-outline'">
+                    </i>
+				<span>Add to favorites</span>
+			</a>
 			<br>
 			<h4 style="center">Weekly Deals!</h4>
 
-			<a href="#/weekly_deals" class="item item-icon-left"  ng-click="deal_date('thursday')">
+			<a href="#/weekly_deals" class="item item-icon-left" ng-click="deal_date('thursday')">
 				<i class="icon ion-social-usd"></i> Thursday
 			</a>
 			<a href="#/weekly_deals" class="item item-icon-left" ng-click="deal_date('friday')">

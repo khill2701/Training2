@@ -34,7 +34,6 @@ angular.module('App').controller('informationController', function ($scope, $sta
   };
 
   $scope.goBack = function () {
-    localStorage.clear();
     $ionicHistory.goBack();
   }
   $scope.deal_date = function (date) {
@@ -42,8 +41,33 @@ angular.module('App').controller('informationController', function ($scope, $sta
 
   }
 
+  $scope.favorites = function (yo) {
+    // retrieve it (Or create a blank array if there isn't any info saved yet),
+    var favorites = JSON.parse(localStorage.getItem('favoritesInfo')) || [];
+    var word = yo;
+    //  returns -1 if it is not found, so you can add it then.
+if (favorites.indexOf(yo) == -1) {
+    favorites.push(yo);
+}
+//favorites.pop();
+    localStorage.setItem('favoritesInfo', JSON.stringify(favorites));
+    console.log(localStorage.getItem('favoritesInfo'));
+  }
 
+  $scope.searchFavorites = function (yo) {
+    // retrieve it (Or create a blank array if there isn't any info saved yet),
+    var favorites = JSON.parse(localStorage.getItem('favoritesInfo')) || [];
+    var word = yo;
+    // Iterate every array item
+    for (var index = 0; index < favorites.length; index++) {
+      // If current array item equals itemToRemove then
+      if (favorites[index] === "Lucky 13's") {
+        return true;
+      }
+    }
+    return true;
 
+  }
 
 }
 );

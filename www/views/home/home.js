@@ -2,7 +2,6 @@
 angular.module('App').controller('homeController', function ($scope, $state, $ionicSideMenuDelegate, $cordovaOauth, $localStorage, $firebaseArray, $location, $http, $ionicPopup, $firebaseObject, Auth, FURL, Utils, $ionicHistory) {
     var ref = new Firebase(FURL);
     $scope.product;
-    debugger;
     $scope.tag= localStorage.getItem('tag');
 
 
