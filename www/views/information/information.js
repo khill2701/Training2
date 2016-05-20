@@ -9,7 +9,6 @@ angular.module('App').controller('informationController', function ($scope, $sta
 
     ]
   };
-
   //to storedata
   var hey = localStorage.getItem('labelz');
   console.log(hey);
