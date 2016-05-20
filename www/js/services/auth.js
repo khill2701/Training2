@@ -23,14 +23,12 @@ angular.module('App').factory('Auth', function(FURL, $firebaseAuth, $firebaseArr
     },
 
     login: function(user) {
-      debugger;
       return auth.$authWithPassword(
         {email: user.email, password: user.password}
       );
     },
 
     register: function(user) {
-      debugger;
       return auth.$createUser({email: user.email, password: user.password})
         .then(function() {
           // authenticate so we have permission to write to Firebase
@@ -65,13 +63,11 @@ angular.module('App').factory('Auth', function(FURL, $firebaseAuth, $firebaseArr
 		},
 
     signedIn: function() {
-      debugger;
       return !!Auth.user.provider; //using !! means (0, undefined, null, etc) = false | otherwise = true
     }
 	};
 
 	auth.$onAuth(function(authData) {
-    debugger;
 		if(authData) {
       angular.copy(authData, Auth.user);
       Auth.user.profile = $firebaseObject(ref.child('profile').child(authData.uid));
