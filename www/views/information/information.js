@@ -40,7 +40,7 @@ angular.module('App').controller('informationController', function ($scope, $sta
     localStorage.setItem('deal_date', date);
 
   }
-<<<<<<< HEAD
+
 
   $scope.favorites = function (yo) {
     // retrieve it (Or create a blank array if there isn't any info saved yet),
@@ -70,7 +70,6 @@ if (favorites.indexOf(yo) == -1) {
 
   }
 
-=======
->>>>>>> refs/remotes/origin/master
+
 }
 );
