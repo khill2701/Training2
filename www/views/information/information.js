@@ -41,9 +41,5 @@ angular.module('App').controller('informationController', function ($scope, $sta
     localStorage.setItem('deal_date', date);
 
   }
-
-
-
-
 }
 );
