@@ -9,7 +9,7 @@
 			border-radius: 12px;
 			border: 2px;
 			/*box-shadow:0 4px 8px 0 red, 0 0 0 3px blue;*/
-			box-shadow:0 4px 8px 0 blue, 0 0 0 3px lightblue;
+			box-shadow: 0 4px 8px 0 blue, 0 0 0 3px lightblue;
 			background-color: black;
 			color: white;
 			opacity: 0.7;
@@ -17,11 +17,12 @@
 			margin-left: 30px;
 			margin-right: 30px;
 		}
-		.addressStyle{
+		
+		.addressStyle {
 			border-radius: 12px;
 			border: 2px;
 			/*box-shadow:0 4px 8px 0 red, 0 0 0 3px blue;*/
-			box-shadow:0 4px 8px 0 blue, 0 0 0 3px lightblue;
+			box-shadow: 0 4px 8px 0 blue, 0 0 0 3px lightblue;
 			background-color: black;
 			color: white;
 			opacity: 0.7;
@@ -40,7 +41,7 @@
 			<h3 style="color:white;">{{data.title}}</h3>
 			<h3 style="color:white;">Description:</h3>
 			<div class="change">
-			<pre><pan class="inner-pre" style="font-size: 18px"><font face="times new roman">{{data.description}}</font></span></pre>
+				<pre><pan class="inner-pre" style="font-size: 18px"><font face="times new roman">{{data.description}}</font></span></pre>
 			</div>
 			<h3 style="color:white;">Address:</h3>
 			<h4 class="addressStyle">{{data.address}}</h4>
@@ -51,40 +52,48 @@
 			<a href="{{data.contact.web}}" class="item item-icon-left">
 				<i class="icon ion-earth"></i> Visit website
 			</a>
-			<a class="item item-icon-left" ng-click="favorites(data.title);main.show_list = 'friends';" ng-class="{'active': main.show_list === 'friends'}">
-				<i class="icon ion-ios-star-outline" ng-class="main.show_list === 'friends' ? 'icon ion-ios-star' : 'icon ion-ios-star-outline'">
+			<a class="item item-icon-left" ng-click="main.show_list = 'friends';" ng-class="{'active': main.show_list === 'friends'}">
+
+				<span ng-if="searchFavorites(data.title)" ng-click="removeFavorites(data.title)">
+				<i class="icon ion-ios-star" ng-class="main.show_list === 'friends' ? 'icon ion-ios-star'" >
                     </i>
-				<span>Add to favorites</span>
+				<span> Remove from favorites no</span>
+				</span>
+				<span ng-if="!searchFavorites(data.title)" ng-click="favorites(data.title)">
+				<i class="icon ion-ios-star-outline" ng-class="main.show_list === 'friends' ? 'icon ion-ios-star'">
+                    </i>
+				<span>Add to favorites go</span>
+				</span>
 			</a>
 			<br>
 			<h4 style="center">Weekly Deals!</h4>
 
 			<a href="#/weekly_deals" class="item item-icon-left" ng-click="deal_date('thursday')">
 
-		<br>
-		<h3 style="color:white;">
+				<br>
+				<h3 style="color:white;">
 		 
 			Weekly Deals
 			<i class="ion-flame assertive"></i>
 		</h3>
-		
-		
-		<div class="list card" style="border-radius:15px">
-			<a href="#/weekly_deals" class="item item-icon-left"  ng-click="deal_date('thursday')">
 
-				<i class="icon ion-social-usd"></i> Thursday
-			</a>
-			<a href="#/weekly_deals" class="item item-icon-left" ng-click="deal_date('friday')">
-				<i class="icon ion-social-usd balanced"></i> Friday
-			</a>
-			<a href="#/weekly_deals" class="item item-icon-left" ng-click="deal_date('saturday')">
-				<i class="icon ion-social-usd"></i> Saturday
-			</a>
 
-		</div>
-		<a  href="{{data.contact.web}}"  class="item item-icon-left">
-				<i class="icon ion-earth"></i> Visit website
-			</a>	
+				<div class="list card" style="border-radius:15px">
+					<a href="#/weekly_deals" class="item item-icon-left" ng-click="deal_date('thursday')">
+
+						<i class="icon ion-social-usd"></i> Thursday
+					</a>
+					<a href="#/weekly_deals" class="item item-icon-left" ng-click="deal_date('friday')">
+						<i class="icon ion-social-usd balanced"></i> Friday
+					</a>
+					<a href="#/weekly_deals" class="item item-icon-left" ng-click="deal_date('saturday')">
+						<i class="icon ion-social-usd"></i> Saturday
+					</a>
+
+				</div>
+				<a href="{{data.contact.web}}" class="item 0item-icon-left">
+					<i class="icon ion-earth"></i> Visit website
+				</a>
 
 	</ion-content>
 </ion-view>
