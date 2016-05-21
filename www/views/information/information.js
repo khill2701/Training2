@@ -40,6 +40,9 @@ angular.module('App').controller('informationController', function ($scope, $sta
 
   }
 
+  $scope.goToFavorites = function () {
+    $location.path("/favorites");
+  }
 
   $scope.favorites = function (yo) {
     // retrieve it (Or create a blank array if there isn't any info saved yet),
@@ -62,14 +65,14 @@ angular.module('App').controller('informationController', function ($scope, $sta
     for (var i = favorites.length - 1; i >= 0; i--) {
       if (favorites[i] === yo) {
 
-        favorites.splice(i,1);
+        favorites.splice(i, 1);
         console.log("Yoooo");
 
         console.log(favorites[i]);
       }
     }
     //favorites.pop();
-     localStorage.setItem('favoritesInfo', JSON.stringify(favorites));
+    localStorage.setItem('favoritesInfo', JSON.stringify(favorites));
     console.log(localStorage.getItem('favoritesInfo'));
   }
 
