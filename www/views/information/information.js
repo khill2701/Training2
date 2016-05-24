@@ -1,5 +1,5 @@
 'use strict';
-angular.module('App').controller('informationController', function ($scope, $state, $cordovaOauth, $localStorage, $firebaseArray, $location, $http, $ionicPopup, $firebaseObject, Auth, FURL, Utils, $ionicHistory) {
+angular.module('App').controller('informationController', function ($scope, $state, $sce, $cordovaOauth, $localStorage, $firebaseArray, $location, $http, $ionicPopup, $firebaseObject, Auth, FURL, Utils, $ionicHistory) {
   var ref = new Firebase(FURL);
   $scope.product = {
     "images": [
@@ -31,7 +31,11 @@ angular.module('App').controller('informationController', function ($scope, $sta
   $scope.redirectToGoogle = function () {
     $window.open('https://www.google.com', '_blank');
   };
-
+  
+  $scope.trustSrc = function(src) {
+    return $sce.trustAsResourceUrl(src);
+  }
+  
   $scope.goBack = function () {
     $ionicHistory.goBack();
   }

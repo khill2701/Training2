@@ -77,24 +77,53 @@
 			<pre><pan class="inner-pre"><font class="myfont" face="times new roman">{{data.description}}</font></span></pre>
 
 			<div class="list card" style="border-radius:15px; opacity:0.9; margin-right: 180px;">
-				<a href="#/weekly_deals" class="item item-icon-left" ng-click="deal_date('thursday')">
+				<div ng-if="!data.isDeal.thursday">
+					<!-- code to render a large video block-->
+					<a class="item item-icon-left">
+						<i class="icon ion-social-usd"></i> Thursday Deals
+					</a>
 
-					<i class="icon ion-social-usd"></i> Thursday Deals
-				</a>
-				<a href="#/weekly_deals" class="item item-icon-left" ng-click="deal_date('friday')">
-					<i class="icon ion-social-usd balanced"></i> Friday Deals
-				</a>
-				<a href="#/weekly_deals" class="item item-icon-left" ng-click="deal_date('saturday')">
-					<i class="icon ion-social-usd"></i> Saturday Deals
-				</a>
+				</div>
+				<div ng-if="data.isDeal.thursday">
+					<!-- code to render the regular video block -->
+					<a href="#/weekly_deals" class="item item-icon-left" ng-click="deal_date('thursday')">
+						<i class="icon ion-social-usd balanced"></i> Thursday Deals
+					</a>
+				</div>
+				<div ng-if="!data.isDeal.friday">
+					<!-- code to render a large video block-->
+					<a class="item item-icon-left">
+						<i class="icon ion-social-usd"></i> Friday Deals
+					</a>
+
+				</div>
+				<div ng-if="data.isDeal.friday">
+					<!-- code to render the regular video block -->
+					<a href="#/weekly_deals" class="item item-icon-left" ng-click="deal_date('Friday')">
+						<i class="icon ion-social-usd balanced"></i> Friday Deals
+					</a>
+				</div>
+
+				<div ng-if="!data.isDeal.saturday">
+					<!-- code to render a large video block-->
+					<a class="item item-icon-left">
+						<i class="icon ion-social-usd"></i> Saturday Deals
+					</a>
+
+				</div>
+				<div ng-if="data.isDeal.saturday">
+					<!-- code to render the regular video block -->
+					<a href="#/weekly_deals" class="item item-icon-left" ng-click="deal_date('saturday')">
+						<i class="icon ion-social-usd balanced"></i> Saturday Deals
+					</a>
+				</div>
 			</div>
 		</div>
 
 		<br>
 
 
-		<a class="item item-icon-left" ng-click="main.show_list = 'friends';" ng-class="{'active': main.show_list === 'friends'}"
-			style="border-radius: 5px; margin-left: 5px; margin-right: 136px; background:#33cd5f;">
+		<a class="item item-icon-left" style="border-radius: 5px; margin-left: 5px; margin-right: 136px; background:#33cd5f;">
 
 			<span ng-if="searchFavorites(data.title)" ng-click="removeFavorites(data.title)">
 				<i class="icon ion-ios-star energized" ng-class="main.show_list === 'friends' ? 'icon ion-ios-star'" >
@@ -112,7 +141,7 @@
 						<i class="icon ion-earth"></i> Visit website
 					</a>-->
 		<br>
-		<iframe width="100%" height="315" src="https://www.youtube.com/embed/kajhz5GKioI" frameborder="0" allowfullscreen></iframe>
+		<iframe width="100%" height="315" src='{{trustSrc(data.youtube)}}' frameborder="0" allowfullscreen="false"></iframe>
 
 
 	</ion-content>
