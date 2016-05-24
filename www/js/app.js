@@ -53,7 +53,7 @@ $stateProvider
       controller:'homeController'
     })
     ;
-$urlRouterProvider.otherwise("/login"); //This is the launch page
+$urlRouterProvider.otherwise("/home"); //This is the launch page
 })
 // Changue this for your Firebase App URL.
 .constant('FURL', 'https://resplendent-inferno-4023.firebaseio.com/')
