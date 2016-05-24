@@ -20,7 +20,10 @@ angular.module('App').controller('homeController', function ($scope, $state, $io
 
     }
 
-
+  $scope.goToFavorites = function () {
+    $location.path("/favorites");
+  }
+  
     $scope.logOut = function () {
         Auth.logout();
         $location.path("/login");
