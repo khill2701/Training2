@@ -40,8 +40,8 @@ angular.module('App').controller('informationController', function ($scope, $sta
 
   }
 
-  $scope.goToFavorites = function () {
-    $location.path("/favorites");
+ $scope.goHome = function () {
+    $location.path('/home');
   }
 
   $scope.favorites = function (yo) {

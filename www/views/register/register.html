@@ -1,39 +1,44 @@
-<ion-view view-title="Register">
+<ion-view view-title="Register" class="backgroundColor" hide-back-button="true"> 
+  <ion-nav-buttons side="left ">
+		<button menu-toggle="right " class="button back-button buttons button-clear header-item " ng-click="goBack() ">
+			<i class="icon ion-ios-arrow-back"> </i>
+		</button>
+	</ion-nav-buttons>
   <ion-content class="padding-top">
     <div class="text-center padding-top">
-      <i class="icon ion-android-person-add larger positive"></i>
+      <i class="icon ion-android-person-add larger light"></i>
     </div>
     <form name="registerForm" novalidate ng-submit="registerForm.$valid && register(user)"
     ng-class="{ 'has-error' : registerForm.txtemail.$invalid && registerForm.$submitted }">
     <div class="list">
-        <label class="item item-input item-floating-label">
+        <label class="item item-input item-floating-label" style="background-color: white;">
           <span class="input-label">Email</span>
-        <input name="txtemail" type="email" ng-model="user.email" placeholder="Email"
+        <input name="txtemail" type="email" ng-model="user.email" placeholder="Enter your Email"
         ng-minlength="5"
         ng-maxlength="30"
         required>
       </label>
       <div class="form-errors" ng-messages="registerForm.txtemail.$error" ng-if="registerForm.$submitted">
-        <div class="form-error" ng-message="required">Debes ingresar algo como nombre@email.com.</div>
+        <div class="form-error" ng-message="required">You must enter something like nombre@email.com.</div>
         <div class="form-error" ng-message="email">This field is must be an email.</div>
-        <div class="form-error" ng-message="maxlength">Ops, parece ser muy grande el correo.</div>
+        <div class="form-error" ng-message="maxlength">Ops, it seems to be very large mail.</div>
       </div>
-        <label class="item item-input item-floating-label" ng-class="{ 'has-error-lr' : registerForm.txtpassword.$invalid  && registerForm.$submitted}">
+        <label class="item item-input item-floating-label" ng-class="{ 'has-error-lr' : registerForm.txtpassword.$invalid  && registerForm.$submitted}" style="background-color: white;">
         <span class="input-label">Password</span>
-        <input name="txtpassword" type="password" ng-model="user.password" placeholder="Password"
+        <input name="txtpassword" type="password" ng-model="user.password" placeholder="Enter a Password"
         ng-minlength="5"
         ng-maxlength="25"
         required>
       </label>
       <div class="form-errors" ng-messages="registerForm.txtpassword.$error" ng-if="registerForm.$submitted">
-        <div class="form-error" ng-message="required">Debes ingresar una Contraseña.</div>
-        <div class="form-error" ng-message="minlength">Ops, parece ser muy corta las Contraseña.</div>
-        <div class="form-error" ng-message="maxlength">Ops, parece ser muy grande las Contraseña.</div>
-        <div class="form-error" ng-message="pattern">Debe ingresar solo caracteres letras y numeros.</div>
+        <div class="form-error" ng-message="required">You must enter a password</div>
+        <div class="form-error" ng-message="minlength">Ops, it seems to be very short the password.</div>
+        <div class="form-error" ng-message="maxlength">Ops, It seems to be very large the Password.</div>
+        <div class="form-error" ng-message="pattern">You must enter characters only letters and numbers.</div>
       </div>
     </div>
     <div class="padding-top">
-      <input type="submit" value="Register" class="button button-block button-positive"/>
+      <input type="submit" value="Register" class="button button-block button-balanced"/>
     </div>
   </form>
   </ion-content>

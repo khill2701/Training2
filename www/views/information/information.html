@@ -1,23 +1,15 @@
 <ion-view view-title="Whatz The Move" hide-back-button="true" class="backgroundColor">
 	<ion-nav-buttons side="primary">
-		<span>
+		
 		<button class="button back-button buttons button-clear header-item" ng-click="goBack()">
 			<i class="icon ion-ios-arrow-back"> </i>
 		</button>
-		</span>
-	</ion-nav-buttons>
-	<ion-nav-buttons side="secondary">
-		<span>
-		<button  class="button back-button buttons button-clear header-item"   ng-click="goToFavorites()">
-	
-			<i class="icon ion-ios-star energized">
-            </i>		
-		</button>
-		</span>
 		
 	</ion-nav-buttons>
-	
-	
+	<a href="#/information">
+                <img class="ng-cloak" style="float:left; display:inline-block;overflow:hidden; border: 1px;" class="fill_image" src='{{ i.picture }}'
+                    style width="100%" style height="100%" ng-click="disableClick('{{ i.firebase_url }}')" />
+            </a>
 	
 	<style>
 		.myfont{
@@ -117,6 +109,21 @@
 				
 			
 	</ion-content>
-	<ion-footer-bar class="bar-balanced">
-			</ion-footer-bar>
+	<ion-footer-bar class="bar-balanced" align-title="left">
+		<div class="buttons" style="margin-left:40px;">
+			<button class="button back-button buttons button-clear header-item" ng-click="goHome()">
+				<i class="icon ion-home">
+				</i>
+			</button>
+		
+		</div>
+		<div class="buttons" style="margin-left:210px;">
+			<button class="button back-button buttons button-clear header-item">
+				<i class="icon ion-person">
+				</i>
+			</button>
+		
+		</div>
+		
+	</ion-footer-bar>
 </ion-view>
