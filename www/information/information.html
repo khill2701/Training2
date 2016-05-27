@@ -58,9 +58,11 @@
 	</style>
 
 	<ion-content class="padding-top" ng-controller="MapController">
-		<!-- Repeated three times because of the array in the controller-->
     <div id="map" data-tap-disabled="true"></div>
-
+		<!-- Repeated three times because of the array in the controller-->
+		<img class="ng-cloak" style="float:left; display:inline-block;overflow:hidden; border: 1px;" class="fill_image" src='{{ data.picture }}'
+			style width="100%" style height="100%" />
+		<div class="padding">
 
 			<h3 style="color: white;">{{data.title}}</h3>
 
