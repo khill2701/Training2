@@ -17,6 +17,71 @@
 .larger {
            font-size: 120px;
 }
+ 
+ #descriptionFont {
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 13px;
+		}
+		
+		#descriptionBorder {
+			background: white;
+			border: solid white;
+			border-style: solid;
+			border-width: 18px;
+			border-top-color: #33cd5f;
+			border-bottom-color: #33cd5f;
+		}
+		
+		
+		
+		
+		
+		#informationTitleH3 {
+			background: black;
+			opacity: 0.7;
+			margin-bottom: -37px;
+			text-align: center;
+		}
+		
+		#favoriteButton {
+			border-radius: 5px;
+			height: 50px;
+			width: 190px;
+			margin-left: 170px; 
+			margin-right: 5px; 
+			background:#33cd5f;
+		}
+		#favoriteButtonText {
+			font-size: 12px;
+		}	
+		#favoriteIconStar{
+			font-size: 30px;
+		}
+		#likeLink {
+			border-radius: 5px;
+			height: 50px;
+			width: 110px;
+			margin-bottom: -50px;
+			margin-left: 10px; 
+			margin-right: 0px; 
+			background:#33cd5f;
+		}
+		#dealListCard {
+		border-radius:15px; 
+		opacity:1.0; 
+		margin-right: 10px;
+		border-bottom-color: #33cd5f;
+		border-top-color: #33cd5f;
+		border-left-color: mediumpurple;
+		border-right-color: mediumpurple; 
+		border-width: 5px;
+		border-style: solid;
+		
+				}
+   #dealRightIcon {
+     margin-left: 300px;
+     font-size: 20px;
+   }
 
 
 /** Error Messages **/
