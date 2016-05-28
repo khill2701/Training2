@@ -1,5 +1,29 @@
 'use strict';
 angular.module('App').controller('informationController', function ($scope, $state, $sce, $cordovaOauth, $localStorage, $firebaseArray, $location, $http, $ionicPopup, $firebaseObject, Auth, FURL, Utils, $ionicHistory) {
+google.maps.event.addDomListener(window, 'load', function () {
+    var myLatlng = new google.maps.LatLng(35.840588, -78.679976);
+
+    var mapOptions = {
+      center: myLatlng,
+      zoom: 16,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+
+    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+    var myLocation = new google.maps.Marker({
+      position: new google.maps.LatLng(35.840588, -78.679976),
+      map: map,
+      title: "My Location"
+    });
+    var myLocation = new google.maps.Marker({
+      position: new google.maps.LatLng(35.840588, -77.679976),
+      map: map,
+      title: "My Location"
+    });
+
+    $scope.map = map;
+  });
   var ref = new Firebase(FURL);
   $scope.product = {
     "images": [
