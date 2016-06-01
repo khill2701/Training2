@@ -1,4 +1,4 @@
-<ion-view view-title="Whatz The Move" hide-back-button="true">
+<ion-view view-title="Whatz The Move" hide-back-button="true" class="backgroundColor">
 	<ion-nav-buttons side="left">
 		<button class="button back-button buttons button-clear header-item" ng-click="goBack()">
 			<i class="icon ion-ios-arrow-back"> </i>
@@ -11,8 +11,8 @@
 
 
 
-		<div class="padding">
-			<pre><pan class="inner-pre" style="font-size: 18px"><font face="times new roman">{{data.$value}}</font></span></pre>
+		<div class="padding" id="dealBorder">
+			<pre id="dealText"><pan class="inner-pre" style="font-size: 18px; color: white;" ><font face="times new roman">{{data.$value}}</font></span></pre>
 
 		</div>
 

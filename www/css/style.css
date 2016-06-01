@@ -28,12 +28,48 @@
 			border: solid white;
 			border-style: solid;
 			border-width: 18px;
-			border-top-color: #33cd5f;
-			border-bottom-color: #33cd5f;
+			border-top-color: #08b124;
+			border-bottom-color: #08b124;
+			opacity: 0.9;
+		}
+		#address {
+			background: black;
+			opacity: 0.8;
+			margin-bottom: 2px;
+			margin-top: -35px;
+			height: 30px;
+			text-align: center;
+		}
+		#addressText {
+			
 		}
 		
+		#websiteLink {
+			border-radius:15px; 
+		opacity:1.0; 
+		margin-right: 10px;
+		margin-left: 10px;
+		border-bottom-color: #33cd5f;
+		border-top-color: #33cd5f;
+		border-left-color: #33cd5f;
+		border-right-color: #33cd5f; 
+		border-width: 5px;
+		border-style: solid;
 		
-		
+		}
+		#videoBorder {
+			margin-left: 19px;
+		 	margin-bottom: 15px;
+			 		border-radius:15px; 
+		opacity:1.0; 
+		margin-right: 0px;
+		border-bottom-color: #33cd5f;
+		border-top-color: #33cd5f;
+		border-left-color: #33cd5f;
+		border-right-color: #33cd5f; 
+		border-width: 7px;
+		border-style: solid;
+		}
 		
 		
 		#informationTitleH3 {
@@ -45,26 +81,52 @@
 		
 		#favoriteButton {
 			border-radius: 5px;
-			height: 50px;
-			width: 190px;
-			margin-left: 170px; 
-			margin-right: 5px; 
-			background:#33cd5f;
+			height: 40px;
+			width: 41%;
+			margin-left: 55%; 
+			
+			
+			border-bottom-color: #33cd5f;
+		border-top-color: #33cd5f;
+		border-left-color: #33cd5f;
+		border-right-color: #33cd5f; 
+		border-width: 3px;
+		
+			 
+			
 		}
 		#favoriteButtonText {
 			font-size: 12px;
+			position: relative;
+			bottom: 10px;
+			
 		}	
 		#favoriteIconStar{
-			font-size: 30px;
+			font-size: 200%;
 		}
 		#likeLink {
 			border-radius: 5px;
-			height: 50px;
-			width: 110px;
+			height: 40px;
+			width: 30%;
+			top: -9px;
 			margin-bottom: -50px;
 			margin-left: 10px; 
 			margin-right: 0px; 
-			background:#33cd5f;
+			border-bottom-color: #33cd5f;
+		border-top-color: #33cd5f;
+		border-left-color: #33cd5f;
+		border-right-color: #33cd5f; 
+		border-width: 3px;
+		
+			
+		}
+		#likeLinkText{
+			font-size: 13px;
+			position: relative;
+			bottom: 10px;
+		}
+		#likeLinkIcon {
+			font-size: 200%;
 		}
 		#dealListCard {
 		border-radius:15px; 
@@ -72,15 +134,29 @@
 		margin-right: 10px;
 		border-bottom-color: #33cd5f;
 		border-top-color: #33cd5f;
-		border-left-color: mediumpurple;
-		border-right-color: mediumpurple; 
+		border-left-color: #33cd5f;
+		border-right-color: #33cd5f; 
 		border-width: 5px;
 		border-style: solid;
 		
 				}
    #dealRightIcon {
-     margin-left: 300px;
+     margin-left: 85%;
      font-size: 20px;
+		 color: #33cd5f;
+   }
+   #dealBorder {
+	   
+	   
+	   
+   }
+   #dealText {
+	   font-size: 18px; 
+	   color: white;
+	   text-align: center;
+	   font-size: 100px;
+	   margin-top: 40%;
+	   margin-bottom: 40px; 
    }
 
 
