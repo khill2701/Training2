@@ -1,5 +1,5 @@
 'Use Strict';
-angular.module('App').controller('forgotController', function ($scope, $state,$cordovaOauth, $localStorage, $location,$http,$ionicPopup, $firebaseObject, Auth, FURL, Utils) {
+angular.module('App').controller('forgotController', function ($scope, $ionicHistory, $state,$cordovaOauth, $localStorage, $location,$http,$ionicPopup, $firebaseObject, Auth, FURL, Utils) {
   var ref = new Firebase(FURL);
   $scope.resetpassword = function(user) {
       if(angular.isDefined(user)){
@@ -12,5 +12,8 @@ angular.module('App').controller('forgotController', function ($scope, $state,$c
         });
       }
     };
+  $scope.goBack = function () {
+    $ionicHistory.goBack();
+  }
 }
 );
