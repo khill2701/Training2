@@ -4,19 +4,11 @@
 		<button class="button back-button buttons button-clear header-item" ng-click="goBack()">
 			<i class="icon ion-ios-arrow-back"> </i>
 		</button>
-
 	</ion-nav-buttons>
 	<a href="#/information">
-                <img class="ng-cloak" style="float:left; display:inline-block;overflow:hidden; border: 1px;" class="fill_image" src='{{ i.picture }}'
-                    style width="100%" style height="100%" ng-click="disableClick('{{ i.firebase_url }}')" />
-            </a>
-	
-
-		</span>
-	
-	
-
-
+    	<img class="ng-cloak" style="float:left; display:inline-block;overflow:hidden; border: 1px;" class="fill_image" src='{{ i.picture }}'
+        	 style width="100%" style height="100%" ng-click="disableClick('{{ i.firebase_url }}')" />
+    </a>
 	<ion-content class="padding-top">
 		<div id="informationTitleH3">
 			<h3  style="color: white;">{{data.title}}</h3>
@@ -26,13 +18,13 @@
 		<img class="ng-cloak"  class="fill_image" src='{{ data.picture }}'
 			style width="100%" style height="100%" />
 		</div>
-		<div class="padding">
-			<address class="addressStyl">{{data.address}}</address>
+		<div class="padding" id="address">
+			<address id="addressText" style="color: white;">{{data.address}}</address>
 		</div>
 		<br>
 		<div>
 		<a class="item item-icon-left" id="likeLink">
-			<i id="likeLinkIcon" class="icon ion-thumbsup stable">
+			<i id="likeLinkIcon" class="icon ion-thumbsup dark">
 			</i>
 			<span id="likeLinkText">Like</span>
 		</a>
@@ -44,7 +36,7 @@
 				<span id="favoriteButtonText">Remove move</span>
 			</span>
 			<span ng-if="!searchFavorites(data.title)" ng-click="favorites(data.title)">
-				<i class="icon ion-ios-star-outline" ng-class="main.show_list === 'friends' ? 'icon ion-ios-star'">
+				<i id="favoriteIconStar" class="icon ion-ios-star-outline" ng-class="main.show_list === 'friends' ? 'icon ion-ios-star'">
                     </i>
 				<span id="favoriteButtonText">Add move</span>
 			</span>
@@ -53,7 +45,7 @@
 		<br>
 
 
-		<div id="descriptionBorder" style="backgroundColor">
+		<div id="descriptionBorder">
 			<h3>Description:</h3>
 			<pre><pan class="inner-pre"><font id="descriptionFont" face="times new roman">{{data.description}}</font></span></pre>
 			</div>
@@ -93,12 +85,12 @@
 
 
 		
-		<br />
-		<!--<a href="{{data.contact.web}}" class="item item-icon-left">
+		
+		<a href="{{data.contact.web}}" class="item item-icon-left" id="websiteLink">
 						<i class="icon ion-earth"></i> Visit website
-					</a>-->
+					</a>
 		<br>
-		<iframe width="90%" height="315" src='{{trustSrc(data.youtube)}}' frameborder="0" allowfullscreen="false" style="margin-left: 19px; margin-bottom: 15px;"></iframe>
+		<iframe width="90%" height="315" src='{{trustSrc(data.youtube)}}' frameborder="0" allowfullscreen="false" id="videoBorder"></iframe>
 
 
 	</ion-content>
