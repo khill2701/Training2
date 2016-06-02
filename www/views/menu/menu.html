@@ -3,7 +3,7 @@
     <link href="css/backgroundColors.css " rel="stylesheet ">
 	<ion-nav-buttons side="left ">
 		<button menu-toggle="right " class="button back-button buttons button-clear header-item " ng-click="goBack() ">
-			<i class="icon ion-ios-arrow-back"> </i>
+			<i class="icon ion-ios-arrow-back "> </i>
 		</button>
 	</ion-nav-buttons>
      <style>
@@ -25,8 +25,14 @@
       
 
           
+<label class = "item item-input item-select ">
+   <div class = "input-label ">
+      Location
+   </div>
+	
+  <select ng-model='form.type' required ng-options='option.value as option.name for option in typeOptions' ng-change="showSelectValue(form.type) "></select>
 
-       
+</label>   
 
       <ion-list show-delete="data.showDelete " show-reorder="data.showReorder ">
           
