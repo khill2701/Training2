@@ -1,6 +1,39 @@
 'Use Strict';
 angular.module('App').controller('menuController', function ($scope, $ionicHistory, $ionicSideMenuDelegate, $state, $cordovaOauth, $localStorage, $location, $http, $ionicPopup, $firebaseObject, Auth, FURL, Utils) {
 
+
+  $scope.typeOptions = [
+    { name: 'Atlanta, Ga', value: 'Atlanta, Ga' },
+    { name: 'New Orleans, La', value: 'New Orleans, La' },
+    { name: 'Raleigh, Nc', value: 'Raleigh, Nc' }
+  ];
+
+  $scope.showSelectValue = function (mySelect) {
+    console.log(mySelect);
+
+    switch (mySelect) {
+      case "Atlanta, Ga":
+        $scope.form = { type: $scope.typeOptions[0].value };
+        break;
+      case "New Orleans, La":
+        $scope.form = { type: $scope.typeOptions[1].value };
+        break;
+      case "Raleigh, Nc":
+        $scope.form = { type: $scope.typeOptions[2].value };
+        break;
+      default:
+        $scope.form = { type: $scope.typeOptions[0].value };
+    }
+  }
+  $scope.form = { type: $scope.typeOptions[0].value };
+
+
+
+
+  $scope.SelectCity = function () {
+
+  }
+
   $scope.goBack = function () {
     $location.path('/home');
 
@@ -8,11 +41,11 @@ angular.module('App').controller('menuController', function ($scope, $ionicHisto
   $scope.openClubs = function () {
     $location.path('/clubs');
   }
-  
+
   $scope.openFavorites = function () {
     $location.path('/favorites');
   }
-  
+
   $scope.openAllMoves = function () {
     $location.path('/home');
   }
