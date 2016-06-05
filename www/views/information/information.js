@@ -31,11 +31,11 @@ angular.module('App').controller('informationController', function ($scope, $sta
   $scope.redirectToGoogle = function () {
     $window.open('https://www.google.com', '_blank');
   };
-  
-  $scope.trustSrc = function(src) {
+
+  $scope.trustSrc = function (src) {
     return $sce.trustAsResourceUrl(src);
   }
-  
+
   $scope.goBack = function () {
     $ionicHistory.goBack();
   }
@@ -44,7 +44,7 @@ angular.module('App').controller('informationController', function ($scope, $sta
 
   }
 
- $scope.goHome = function () {
+  $scope.goHome = function () {
     $location.path('/home');
   }
 
@@ -59,6 +59,14 @@ angular.module('App').controller('informationController', function ($scope, $sta
     //favorites.pop();
     localStorage.setItem('favoritesInfo', JSON.stringify(favorites));
     console.log(localStorage.getItem('favoritesInfo'));
+  }
+
+  $scope.like = function () {
+    var word = localStorage.getItem('labelz') + '/likes';
+    var upvotesRef = new Firebase(word);
+    upvotesRef.transaction(function (current_value) {
+      return (current_value || 0) + 1;
+    });
   }
 
   $scope.removeFavorites = function (yo) {
