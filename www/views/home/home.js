@@ -8,6 +8,12 @@ angular.module('App').controller('homeController', function ($scope, $state, $io
         $scope.tag = localStorage.getItem('tag');
         $scope.display_location = localStorage.getItem('display_location');
 
+        // Default location
+        if (!$scope.location) {
+            $scope.tag = '';
+            $scope.display_location = 'North Carolina';
+            $scope.location = 'north_carolina';
+        }
 
 
         $scope.location = localStorage.getItem('location');
