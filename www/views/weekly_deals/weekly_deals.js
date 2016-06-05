@@ -34,7 +34,6 @@ angular.module('App').controller('weekly_dealsController', function ($scope, $st
   };
 
   $scope.goBack = function () {
-    localStorage.clear();
     $ionicHistory.goBack();
   }
 
