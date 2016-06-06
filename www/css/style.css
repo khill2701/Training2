@@ -1,163 +1,46 @@
 /* Empty. Add your own CSS if you like */
 
-
-
-
-
-.backgroundColor {
-           /**background-color: lightgrey;**/
-           background: url(../img/backgroundColor.png);
-           }
-
- ion-item {               
-           font-weight: bold;
-           font-style: italic;
-           }
-
-.larger {
-           font-size: 120px;
+/* ----- CSS for iPhone 5 and 5c ----- */
+@media screen
+and (-webkit-device-pixel-ratio: 2) {
+    #beerIcon {
+        margin-top: 5%;
+        font-size: 700%;
+        }
+    #backgroundColor {
+        background: url(../img/480x800.png);
+        background-repeat: no-repeat;
+    }
+    }
+@media screen
+and (-webkit-device-pixel-ratio: 3) {
+    #beerIcon {
+        margin-top: 5%%;
+        font-size: 1200%;
+    }
+    #backgroundColor {
+        background: url(../img/480x800.png);
+        background-repeat: no-repeat;
+    }
 }
- 
- #descriptionFont {
-			font-family: Arial, Helvetica, sans-serif;
-			font-size: 13px;
-		}
-		
-		#descriptionBorder {
-			background: white;
-			border: solid white;
-			border-style: solid;
-			border-width: 18px;
-			border-top-color: #08b124;
-			border-bottom-color: #08b124;
-			opacity: 0.9;
-		}
-		#address {
-			background: black;
-			opacity: 0.8;
-			margin-bottom: 2px;
-			margin-top: -35px;
-			height: 30px;
-			text-align: center;
-		}
-		#addressText {
-			
-		}
-		
-		#websiteLink {
-			border-radius:15px; 
-		opacity:1.0; 
-		margin-right: 10px;
-		margin-left: 10px;
-		border-bottom-color: #33cd5f;
-		border-top-color: #33cd5f;
-		border-left-color: #33cd5f;
-		border-right-color: #33cd5f; 
-		border-width: 5px;
-		border-style: solid;
-		
-		}
-		#videoBorder {
-			margin-left: 19px;
-		 	margin-bottom: 15px;
-			 		border-radius:15px; 
-		opacity:1.0; 
-		margin-right: 0px;
-		border-bottom-color: #33cd5f;
-		border-top-color: #33cd5f;
-		border-left-color: #33cd5f;
-		border-right-color: #33cd5f; 
-		border-width: 7px;
-		border-style: solid;
-		}
-		
-		
-		#informationTitleH3 {
-			background: black;
-			opacity: 0.7;
-			margin-bottom: -37px;
-			text-align: center;
-		}
-		
-		#favoriteButton {
-			border-radius: 5px;
-			height: 40px;
-			width: 41%;
-			margin-left: 55%; 
-			
-			
-			border-bottom-color: #33cd5f;
-		border-top-color: #33cd5f;
-		border-left-color: #33cd5f;
-		border-right-color: #33cd5f; 
-		border-width: 3px;
-		
-			 
-			
-		}
-		#favoriteButtonText {
-			font-size: 12px;
-			position: relative;
-			bottom: 10px;
-			
-		}	
-		#favoriteIconStar{
-			font-size: 200%;
-		}
-		#likeLink {
-			border-radius: 5px;
-			height: 40px;
-			width: 30%;
-			top: -9px;
-			margin-bottom: -50px;
-			margin-left: 10px; 
-			margin-right: 0px; 
-			border-bottom-color: #33cd5f;
-		border-top-color: #33cd5f;
-		border-left-color: #33cd5f;
-		border-right-color: #33cd5f; 
-		border-width: 3px;
-		
-			
-		}
-		#likeLinkText{
-			font-size: 13px;
-			position: relative;
-			bottom: 10px;
-		}
-		#likeLinkIcon {
-			font-size: 200%;
-		}
-		#dealListCard {
-		border-radius:15px; 
-		opacity:1.0; 
-		margin-right: 10px;
-		border-bottom-color: #33cd5f;
-		border-top-color: #33cd5f;
-		border-left-color: #33cd5f;
-		border-right-color: #33cd5f; 
-		border-width: 5px;
-		border-style: solid;
-		
-				}
-   #dealRightIcon {
-     margin-left: 85%;
-     font-size: 20px;
-		 color: #33cd5f;
-   }
-   #dealBorder {
-	   
-	   
-	   
-   }
-   #dealText {
-	   font-size: 18px; 
-	   color: white;
-	   text-align: center;
-	   font-size: 100px;
-	   margin-top: 40%;
-	   margin-bottom: 40px; 
-   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /** Error Messages **/
