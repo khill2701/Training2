@@ -1,46 +1,56 @@
 <ion-view view-title="Whatz The Move" hide-back-button="true" class="backgroundColor">
 	<ion-nav-buttons side="primary">
-		
+
 		<button class="button back-button buttons button-clear header-item" ng-click="goBack()">
 			<i class="icon ion-ios-arrow-back"> </i>
 		</button>
 	</ion-nav-buttons>
 	<a href="#/information">
-    	<img class="ng-cloak" style="float:left; display:inline-block;overflow:hidden; border: 1px;" class="fill_image" src='{{ i.picture }}'
-        	 style width="100%" style height="100%" ng-click="disableClick('{{ i.firebase_url }}')" />
-    </a>
+		<img class="ng-cloak" style="float:left; display:inline-block;overflow:hidden; border: 1px;" class="fill_image" src='{{ i.picture }}'
+			style width="100%" style height="100%" ng-click="disableClick('{{ i.firebase_url }}')" />
+	</a>
 	<ion-content class="padding-top">
 		<div id="informationTitleH3">
-			<h3  style="color: white;">{{data.title}}</h3>
-		</div>	
+			<h3 style="color: white;">{{data.title}}</h3>
+		</div>
 		<div>
-		<!-- Repeated three times because of the array in the controller-->
-		<img class="ng-cloak"  class="fill_image" src='{{ data.picture }}'
-			style width="100%" style height="100%" />
+			<!-- Repeated three times because of the array in the controller-->
+			<img class="ng-cloak" class="fill_image" src='{{ data.picture }}' style width="100%" style height="100%" />
 		</div>
 		<div class="padding" id="address">
 			<address id="addressText" style="color: white;">{{data.address}}</address>
 		</div>
 		<br>
 		<div>
-		<a class="item item-icon-left" id="likeLink"  ng-click="like()">
-			<i id="likeLinkIcon" class="icon ion-thumbsup dark">
-			</i>
-			<span id="likeLinkText">Like</span>
-		</a>
-		<a class="item item-icon-left" id="favoriteButton">
+			<a class="item item-icon-left" id="likeLink">
 
-			<span ng-if="searchFavorites(data.title)" ng-click="removeFavorites(data.title)">
+
+				<span ng-if="searchLikes(data.firebase_url)" ng-click="removeLike(data.firebase_url)">
+				<i id="favoriteIconStar" class="icon ion-thumbsup energized" ng-class="main.show_list === 'friends' ? 'icon ion-ios-star'" >
+                    </i>
+				<span id="favoriteButtonText">Unlike</span>
+				</span>
+				<span ng-if="!searchLikes(data.firebase_url)" ng-click="like(data.firebase_url)">
+				<i id="likeLinkIcon" class="icon ion-thumbsup dark" ng-class="main.show_list === 'friends' ? 'icon ion-ios-star'">
+                    </i>
+				<span id="favoriteButtonText">Like</span>
+				</span>
+
+			</a>
+
+			<a class="item item-icon-left" id="favoriteButton">
+
+				<span ng-if="searchFavorites(data.title)" ng-click="removeFavorites(data.title)">
 				<i id="favoriteIconStar" class="icon ion-ios-star energized" ng-class="main.show_list === 'friends' ? 'icon ion-ios-star'" >
                     </i>
 				<span id="favoriteButtonText">Remove move</span>
-			</span>
-			<span ng-if="!searchFavorites(data.title)" ng-click="favorites(data.title)">
+				</span>
+				<span ng-if="!searchFavorites(data.title)" ng-click="favorites(data.title)">
 				<i id="favoriteIconStar" class="icon ion-ios-star-outline" ng-class="main.show_list === 'friends' ? 'icon ion-ios-star'">
                     </i>
 				<span id="favoriteButtonText">Add move</span>
-			</span>
-		</a>
+				</span>
+			</a>
 		</div>
 		<br>
 
@@ -48,47 +58,46 @@
 		<div id="descriptionBorder">
 			<h3>Description:</h3>
 			<pre><pan class="inner-pre"><font id="descriptionFont" face="times new roman">{{data.description}}</font></span></pre>
-			</div>
-			
-			<div class="list card" id="dealListCard">
-				
-				<div ng-if="data.isDeal.thursday">
-					<!-- code to render the regular video block -->
-					<a href="#/weekly_deals" class="item item-icon-left" ng-click="deal_date('thursday')">
-						<i class="icon ion-social-usd balanced"></i> 
-						 Thursday Deals
-						
-						<span class="icon ion-chevron-right" id="dealRightIcon"></span>
-						
-					</a>
-					
-				</div>
-				<div ng-if="data.isDeal.friday">
-					<!-- code to render the regular video block -->
-					<a href="#/weekly_deals" class="item item-icon-left" ng-click="deal_date('Friday')">
-						<i class="icon ion-social-usd balanced"></i> Friday Deals
-						<span class="icon ion-chevron-right" id="dealRightIcon"></span>
-					</a>
-				</div>
+		</div>
 
-				<div ng-if="data.isDeal.saturday">
-					<!-- code to render the regular video block -->
-					<a href="#/weekly_deals" class="item item-icon-left" ng-click="deal_date('saturday')">
-						<i class="icon ion-social-usd balanced"></i> Saturday Deals
-						<span class="icon ion-chevron-right" id="dealRightIcon"></span>
-					</a>
-				</div>
+		<div class="list card" id="dealListCard">
+
+			<div ng-if="data.isDeal.thursday">
+				<!-- code to render the regular video block -->
+				<a href="#/weekly_deals" class="item item-icon-left" ng-click="deal_date('thursday')">
+					<i class="icon ion-social-usd balanced"></i> Thursday Deals
+
+					<span class="icon ion-chevron-right" id="dealRightIcon"></span>
+
+				</a>
+
 			</div>
-		
+			<div ng-if="data.isDeal.friday">
+				<!-- code to render the regular video block -->
+				<a href="#/weekly_deals" class="item item-icon-left" ng-click="deal_date('Friday')">
+					<i class="icon ion-social-usd balanced"></i> Friday Deals
+					<span class="icon ion-chevron-right" id="dealRightIcon"></span>
+				</a>
+			</div>
+
+			<div ng-if="data.isDeal.saturday">
+				<!-- code to render the regular video block -->
+				<a href="#/weekly_deals" class="item item-icon-left" ng-click="deal_date('saturday')">
+					<i class="icon ion-social-usd balanced"></i> Saturday Deals
+					<span class="icon ion-chevron-right" id="dealRightIcon"></span>
+				</a>
+			</div>
+		</div>
+
 
 		<br>
 
 
-		
-		
+
+
 		<a href="{{data.contact.web}}" class="item item-icon-left" id="websiteLink">
-						<i class="icon ion-earth"></i> Visit website
-					</a>
+			<i class="icon ion-earth"></i> Visit website
+		</a>
 		<br>
 		<iframe width="90%" height="315" src='{{trustSrc(data.youtube)}}' frameborder="0" allowfullscreen="false" id="videoBorder"></iframe>
 
@@ -101,18 +110,18 @@
 				<i class="icon ion-home">
 				</i>
 			</button>
-		
+
 		</div>
 		<div class="buttons" style="margin-left:210px;">
 			<button class="button back-button buttons button-clear header-item">
 				<i class="icon ion-person">
 				</i>
 			</button>
-		
+
 		</div>
-		
 
-	<ion-footer-bar class="bar-balanced">
 
-	</ion-footer-bar>
+		<ion-footer-bar class="bar-balanced">
+
+		</ion-footer-bar>
 </ion-view>

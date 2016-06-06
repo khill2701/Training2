@@ -61,13 +61,7 @@ angular.module('App').controller('informationController', function ($scope, $sta
     console.log(localStorage.getItem('favoritesInfo'));
   }
 
-  $scope.like = function () {
-    var word = localStorage.getItem('labelz') + '/likes';
-    var upvotesRef = new Firebase(word);
-    upvotesRef.transaction(function (current_value) {
-      return (current_value || 0) + 1;
-    });
-  }
+
 
   $scope.removeFavorites = function (yo) {
     // retrieve it (Or create a blank array if there isn't any info saved yet),
@@ -102,6 +96,61 @@ angular.module('App').controller('informationController', function ($scope, $sta
 
   }
 
+  $scope.like = function (yo) {
+    debugger;
+    // retrieve it (Or create a blank array if there isn't any info saved yet),
+    var favorites = JSON.parse(localStorage.getItem('likeInfo')) || [];
+    var word = yo;
+    //  returns -1 if it is not found, so you can add it then.
+    if (favorites.indexOf(yo) == -1) {
+      var upvotesRef = new Firebase(localStorage.getItem('labelz') + '/likes');
+      upvotesRef.transaction(function (current_value) {
+        return (current_value || 0) + 1;
+      });
+      favorites.push(yo);
 
-}
-);
+    }
+    //favorites.pop();
+    localStorage.setItem('likeInfo', JSON.stringify(favorites));
+    console.log(localStorage.getItem('likeInfo'));
+  }
+
+  $scope.removeLike = function (yo) {
+    debugger;
+    // retrieve it (Or create a blank array if there isn't any info saved yet),
+    var favorites = JSON.parse(localStorage.getItem('likeInfo')) || [];
+    var word = yo;
+
+    for (var i = favorites.length - 1; i >= 0; i--) {
+      if (favorites[i] === yo) {
+
+        favorites.splice(i, 1);
+        var upvotesRef = new Firebase(localStorage.getItem('labelz') + '/likes');
+        upvotesRef.transaction(function (current_value) {
+          return (current_value || 0) - 1;
+        });
+
+        console.log("Yoooo");
+
+        console.log(favorites[i]);
+      }
+    }
+    //favorites.pop();
+    localStorage.setItem('likeInfo', JSON.stringify(favorites));
+    console.log(localStorage.getItem('likeInfo'));
+  }
+
+  $scope.searchLikes = function (yo) {
+    // retrieve it (Or create a blank array if there isn't any info saved yet),
+    // retrieve it (Or create a blank array if there isn't any info saved yet),
+    var favorites = JSON.parse(localStorage.getItem('likeInfo')) || [];
+    var word = yo;
+    //returns -1 if it is not found, so you can add it then.
+    if (favorites.indexOf(yo) == -1) {
+      return false;
+    }
+    console.log(localStorage.getItem('likeInfo'));
+    return true;
+
+  }
+});
