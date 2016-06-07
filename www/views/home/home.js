@@ -5,18 +5,18 @@ angular.module('App').controller('homeController', function ($scope, $state, $io
 
         var ref = new Firebase(FURL);
         $scope.product;
-        $scope.tag = localStorage.getItem('tag');
-        $scope.display_location = localStorage.getItem('display_location');
-
+        $scope.location = localStorage.getItem('location');
         // Default location
         if (!$scope.location) {
             $scope.tag = '';
             $scope.display_location = 'North Carolina';
             $scope.location = 'north_carolina';
+        } else {
+            $scope.tag = localStorage.getItem('tag');
+            $scope.display_location = localStorage.getItem('display_location');
         }
 
 
-        $scope.location = localStorage.getItem('location');
 
         // Get a reference to our posts
         var ref = new Firebase("https://boiling-torch-5034.firebaseio.com/" + $scope.location);
