@@ -5,7 +5,7 @@ angular.module('App').controller('homeController', function ($scope, $state, $io
 
         var ref = new Firebase(FURL);
         $scope.product;
-
+        $scope.location = localStorage.getItem('location');
         // Default location
         if (!$scope.location) {
             $scope.tag = '';
@@ -14,8 +14,6 @@ angular.module('App').controller('homeController', function ($scope, $state, $io
         } else {
             $scope.tag = localStorage.getItem('tag');
             $scope.display_location = localStorage.getItem('display_location');
-            $scope.location = localStorage.getItem('location');
-
         }
 
 
