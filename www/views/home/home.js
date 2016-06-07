@@ -9,7 +9,7 @@ angular.module('App').controller('homeController', function ($scope, $state, $io
         // Default location
         if (!$scope.location) {
             $scope.tag = '';
-            $scope.display_location = 'Raleigh, NC';
+            $scope.display_location = 'North Carolina';
             $scope.location = 'north_carolina';
         } else {
             $scope.tag = localStorage.getItem('tag');
