@@ -67,8 +67,6 @@ and (-webkit-device-pixel-ratio: 1) {
         
     }
 }
-
-}
 /* ----- This effects only
             iPhone 5 and 5c
             iPhone 6 ----- */
@@ -187,8 +185,8 @@ and (-webkit-device-pixel-ratio: 3) {
 }
 /* ----- This effects only tablets ----- */
 @media screen
-and (min-device-width: 768px) {
-    #likeLinkText{
+and (min-device-width: 768px) {  
+    #likeLinkText {
         font-size: 13px;
         position: relative;
         bottom: 10px;
@@ -229,7 +227,7 @@ and (min-device-width: 768px) {
         
     }
     #beerIcon {
-        margin-top: 5%%;
+        margin-top: 5%;
         font-size: 1200%;
     }
     #backgroundColor {
@@ -240,6 +238,7 @@ and (min-device-width: 768px) {
     }
     
 }
+
 
 
 
