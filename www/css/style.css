@@ -1,33 +1,245 @@
 /* Empty. Add your own CSS if you like */
 
-/* ----- CSS for iPhone 5 and 5c ----- */
+@media screen
+and (-webkit-device-pixel-ratio: 1) {
+    #informationFavoriteButton {
+        border-radius: 5px;
+        height: 40px;
+        width: 41%;
+        margin-left: 55%;
+        border-bottom-color: #33cd5f;
+        border-top-color: #33cd5f;
+        border-left-color: #33cd5f;
+        border-right-color: #33cd5f;
+        border-width: 3px;
+    }
+    #informationFavoriteButtonText {
+        font-size: 12px;
+        position: relative;
+        bottom: 10px;
+        
+    }
+    #informationFavoriteIconStar{
+        font-size: 200%;
+    }
+    #informationLikeLinkText{
+        font-size: 13px;
+        position: relative;
+        bottom: 10px;
+    }
+    #informationLikeLinkIcon {
+        font-size: 200%;
+    }
+    #informationLike {
+        border-radius: 5px;
+        height: 40px;
+        width: 30%;
+        top: -9px;
+        margin-bottom: -50px;
+        margin-left: 10px;
+        margin-right: 0px;
+        border-bottom-color: #33cd5f;
+        border-top-color: #33cd5f;
+        border-left-color: #33cd5f;
+        border-right-color: #33cd5f;
+        border-width: 3px;
+    }
+    #informationAddress {
+        background: black;
+        opacity: 0.8;
+        margin-bottom: 2px;
+        margin-top: -35px;
+        height: 30px;
+        text-align: center;
+    }
+    #informationTitleH3 {
+        background: black;
+        opacity: 0.7;
+        margin-bottom: -37px;
+        text-align: center;
+    }
+    #beerIcon {
+        margin-top: 5%;
+        font-size: 1200%;
+    }
+    #backgroundColor {
+        background: url(../img/480x800.png);
+        
+    }
+}
+
+}
+/* ----- This effects only
+            iPhone 5 and 5c
+            iPhone 6 ----- */
 @media screen
 and (-webkit-device-pixel-ratio: 2) {
+    #informationLike {
+        border-radius: 5px;
+        height: 40px;
+        width: 30%;
+        top: -9px;
+        margin-bottom: -50px;
+        margin-left: 10px;
+        margin-right: 0px;
+        border-bottom-color: #33cd5f;
+        border-top-color: #33cd5f;
+        border-left-color: #33cd5f;
+        border-right-color: #33cd5f;
+        border-width: 3px;
+    }
+    #informationAddress {
+        background: black;
+        opacity: 0.8;
+        margin-bottom: 2px;
+        margin-top: -35px;
+        height: 30px;
+        text-align: center;
+    }
+    #informationTitleH3 {
+        background: black;
+        opacity: 0.7;
+        margin-bottom: -10%;
+        text-align: center;
+    }
     #beerIcon {
         margin-top: 5%;
         font-size: 700%;
         }
     #backgroundColor {
         background: url(../img/480x800.png);
-        background-repeat: no-repeat;
+        
     }
     }
+/** ----- This effects only
+            iPhone 6 plus
+            HTC One
+            Samsung Galaxy S4 and S5
+            LG Nexus 5 
+            Huawei Ascend P7
+            OnePlus One ----- **/
 @media screen
 and (-webkit-device-pixel-ratio: 3) {
+    #informationFavoriteButton {
+        border-radius: 5px;
+        height: 40px;
+        width: 41%;
+        margin-left: 55%;
+        border-bottom-color: #33cd5f;
+        border-top-color: #33cd5f;
+        border-left-color: #33cd5f;
+        border-right-color: #33cd5f;
+        border-width: 3px;
+    }
+    #informationFavoriteButtonText {
+        font-size: 12px;
+        position: relative;
+        bottom: 10px;
+        
+    }	
+    #informationFavoriteIconStar{
+        font-size: 200%;
+    }
+    #informationLikeLinkText{
+        font-size: 13px;
+        position: relative;
+        bottom: 10px;
+    }
+    #informationLikeLinkIcon {
+        font-size: 200%;
+    }
+    #informationLike {
+        border-radius: 5px;
+        height: 40px;
+        width: 30%;
+        top: -9px;
+        margin-bottom: -50px;
+        margin-left: 10px;
+        margin-right: 0px;
+        border-bottom-color: #33cd5f;
+        border-top-color: #33cd5f;
+        border-left-color: #33cd5f;
+        border-right-color: #33cd5f;
+        border-width: 3px;
+    }
+    #informationAddress {
+        background: black;
+        opacity: 0.8;
+        margin-bottom: 2px;
+        margin-top: -35px;
+        height: 30px;
+        text-align: center;
+    }
+    #informationTitleH3 {
+        background: black;
+        opacity: 0.7;
+        margin-bottom: -37px;
+        text-align: center;
+    }
+    #beerIcon {
+        margin-top: 5%;
+        font-size: 1200%;
+    }
+    #backgroundColor {
+        background: url(../img/480x800.png);
+        
+    }
+}
+/* ----- This effects only tablets ----- */
+@media screen
+and (min-device-width: 768px) {
+    #likeLinkText{
+        font-size: 13px;
+        position: relative;
+        bottom: 10px;
+    }
+    #likeLinkIcon {
+        font-size: 200%;
+    }
+    #informationLike {
+        border-radius: 5px;
+        height: 40px;
+        width: 30%;
+        top: -9px;
+        margin-bottom: -50px;
+        margin-left: 10px;
+        margin-right: 0px;
+        border-bottom-color: #33cd5f;
+        border-top-color: #33cd5f;
+        border-left-color: #33cd5f;
+        border-right-color: #33cd5f;
+        border-width: 3px;
+    }
+    #informationAddress {
+        background: black;
+        opacity: 0.8;
+        margin-bottom: 2px;
+        margin-top: -35px;
+        height: 30px;
+        text-align: center;
+    }
+    #informationTitleText{
+        font-size: 300%;
+    }
+    #informationTitleH3 {
+        background: black;
+        opacity: 0.7;
+        margin-bottom: -7%;
+        text-align: center;
+        
+    }
     #beerIcon {
         margin-top: 5%%;
         font-size: 1200%;
     }
     #backgroundColor {
-        background: url(../img/480x800.png);
-        background-repeat: no-repeat;
+        background: url(../img/768x1024.png);
     }
+    #homeImg {
+        width: 100%;
+    }
+    
 }
-
-
-
-
-
 
 
 
