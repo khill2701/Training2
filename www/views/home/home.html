@@ -1,4 +1,4 @@
-<ion-view view-title="{{display_location}}" hide-back-button="true" class="backgroundColor">
+<ion-view view-title="{{display_location}}" hide-back-button="true" id="backgroundColor">
 
     <!-- Changed padding to 0 -->
 
@@ -13,7 +13,7 @@
 
 
         <!-- end wrapper div -->
-        <div ng-repeat="i in data| filter: { tags: tag } " class='wrapper'>
+        <div ng-repeat="i in data| filter: { tags: tag } " class='wrapper' id="homeImg">
             <!-- wrapper div -->
             <!-- add address of information here!!!! -->
 
