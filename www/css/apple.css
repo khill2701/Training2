@@ -1,17 +1,211 @@
-/* Empty. Add your own CSS if you like */
-
-/*******************************************************************************/
-/* ----- This effects only
-            iPhone 5 and 5c
-            iPhone 6 ----- */
-/*@media screen
-and (-webkit-device-pixel-ratio: ) {
+/* ----- This will effect only 
+        iPad 1, 2, 3 & 4
+        iPad Air 1 & 2
+        iPad Mini 1, 2, & 3 ----- */
+@media screen
+and (min-width: 768px)
+and (max-width: 1024px) {
+    ion-item[class] {
+        border-radius: 12px;
+        opacity: 0.7;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        margin-right: 50px;
+        margin-left: 10px;
+        padding-right: 90%;
+    }
     #informationCommentIcon {
-        font-size: 150%;
+        font-size: 200%;
         margin-left: 10%;
     }
     #informationCommentText {
-        font-size: 12px;
+        font-size: 20px;
+        position: relative;
+        bottom: 2px;
+        color: white;
+    }
+    #informationWebsiteLink {
+        border-radius:15px;
+        opacity:1.0;
+        margin-right: 10px;
+        margin-left: 10px;
+        border-bottom-color: #33cd5f;
+        border-top-color: #33cd5f;
+        border-left-color: #33cd5f;
+        border-right-color: #33cd5f;
+        border-width: 5px;
+        border-style: solid;
+        
+    }
+    #informationVideoBorder {
+        margin-left: 35px;
+        margin-bottom: 15px;
+        border-radius:15px;
+        opacity:1.0;
+        margin-right: 0px;
+        border-bottom-color: #33cd5f;
+        border-top-color: #33cd5f;
+        border-left-color: #33cd5f;
+        border-right-color: #33cd5f;
+        border-width: 7px;
+        border-style: solid;
+    }
+    #informationDealRightIcon {
+        margin-left: 90%;
+        font-size: 20px;
+        color: #33cd5f;
+    }
+    #informationDealText {
+        font-size: 24px;
+        color: white;
+        font-size: 140px;
+        text-align: center;
+        margin-top: 40%;
+        margin-bottom: 40px;
+    }
+    #informationDealListCard {
+        border-radius:15px;
+        opacity:1.0;
+        margin-right: 10px;
+        border-bottom-color: #33cd5f;
+        border-top-color: #33cd5f;
+        border-left-color: #33cd5f;
+        border-right-color: #33cd5f;
+        border-width: 5px;
+        border-style: solid;
+        
+				}
+    #informationDescriptionFont {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 13px;
+    }
+    #informationDescriptionBorder {
+        background: white;
+        border: solid white;
+        border-style: solid;
+        border-width: 18px;
+        border-top-color: #08b124;
+        border-bottom-color: #08b124;
+        opacity: 0.9;
+    }
+    #informationFavoriteButton {
+        border-radius: 5px;
+        height: 40px;
+        width: 41%;
+        margin-left: 55%;
+        border-bottom-color: #33cd5f;
+        border-top-color: #33cd5f;
+        border-left-color: #33cd5f;
+        border-right-color: #33cd5f;
+        border-width: 3px;
+    }
+    #informationFavoriteButtonText {
+        font-size: 20px;
+        position: relative;
+        bottom: 2px;
+        color: white;
+        
+    }
+    
+    #informationFavoriteIconStar{
+        font-size: 200%;
+        margin: 0 0 0 10%;
+    }
+    #informationLikeLinkText{
+        font-size: 20px;
+        position: relative;
+        bottom: 2px;
+        color: white;
+        
+    }
+    
+    #informationLikeLinkIcon {
+        font-size: 200%;
+        margin: 0 0 0 7%;
+        
+    }
+    #informationLike {
+        
+        height: 40px;
+        width: 30%;
+        top: -9px;
+        margin-bottom: -50px;
+        margin-left: 20px;
+        margin-right: 0px;
+        
+    }
+    #informationAddressText {
+        font-size: 30px;
+        color: white;
+    }
+    #informationAddress {
+        background: black;
+        
+        opacity: 0.8;
+        margin-bottom: -10px;
+        margin-top: -40px;
+       
+        text-align: center;
+    }
+    #informationDescriptionFont{
+        font-size: 20px;
+        margin-bottom: 50%;
+    }
+    #informationDescriptTitle {
+        font-size: 30px;
+        margin-top: 2%;
+    }
+    #informationTitleH3 {
+        background: black;
+        opacity: 0.7;
+        margin-bottom: -7%;
+        text-align: center;
+    }
+    #informationTitleText {
+        color: white;
+        font-size: 40px;
+    }
+    #loginBeerIcon {
+        margin-top: 5%;
+        font-size: 700%;
+    }
+    #registerPersonIcon {
+        margin-top: 5%;
+        font-size: 700%
+    }
+    #forgotInfiniteIcon {
+        margin-top: 5%;
+        font-size: 700%
+    }
+
+    #backgroundColor {
+       background: url(../img/768x1024.png);
+    }
+    #homeImg {
+        width: 100%%;
+    }
+}
+/****************************************************/
+/* iphone 6 plus */
+@media screen
+and (min-device-width: 414px)
+and (max-device-width: 736px)
+and (-webkit-min-device-pixel-ratio: 3){
+    ion-item[class] {
+        border-radius: 12px;
+        opacity: 0.7;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        margin-right: 50px;
+        margin-left: 10px;
+        padding-right: 82%;
+    }
+    #informationCommentIcon {
+        font-size: 150%;
+        margin-left: 15%;
+    }
+    #informationCommentText {
+        font-size: 14px;
         position: relative;
         bottom: 2px;
         color: white;
@@ -92,7 +286,7 @@ and (-webkit-device-pixel-ratio: ) {
         border-width: 3px;
     }
     #informationFavoriteButtonText {
-        font-size: 12px;
+        font-size: 14px;
         position: relative;
         bottom: 2px;
         color: white;
@@ -101,10 +295,11 @@ and (-webkit-device-pixel-ratio: ) {
     
     #informationFavoriteIconStar{
         font-size: 150%;
-        margin: 0 0 0 10%;
+        margin: 0 0 0 15%;
+        
     }
     #informationLikeLinkText{
-        font-size: 12px;
+        font-size: 14px;
         position: relative;
         bottom: 2px;
         color: white;
@@ -113,10 +308,10 @@ and (-webkit-device-pixel-ratio: ) {
     #informationLikeLinkIcon {
         font-size: 150%;
         margin: 0 0 0 7%;
-       
+        
     }
     #informationLike {
-       
+        
         height: 40px;
         width: 30%;
         top: -9px;
@@ -136,13 +331,13 @@ and (-webkit-device-pixel-ratio: ) {
     #informationTitleH3 {
         background: black;
         opacity: 0.7;
-        margin-bottom: -10%;
+        margin-bottom: -9%;
         text-align: center;
     }
     #loginBeerIcon {
         margin-top: 5%;
         font-size: 700%;
-        }
+    }
     #registerPersonIcon {
         margin-top: 5%;
         font-size: 700%
@@ -153,199 +348,5 @@ and (-webkit-device-pixel-ratio: ) {
     }
     #backgroundColor {
         background: url(../img/480x800.png);
-        }
-    }*/
-/*******************************************************************************/
-/** ----- This effects only
-            iPhone 6 plus
-            HTC One
-            Samsung Galaxy S4 and S5
-            LG Nexus 5 
-            Huawei Ascend P7
-            OnePlus One ----- **/
-/*@media screen
-and (-webkit-device-pixel-ratio: ) {
-    #informationWebsiteLink {
-        border-radius:15px;
-        opacity:1.0;
-        margin-right: 10px;
-        margin-left: 10px;
-        border-bottom-color: #33cd5f;
-        border-top-color: #33cd5f;
-        border-left-color: #33cd5f;
-        border-right-color: #33cd5f;
-        border-width: 5px;
-        border-style: solid;
-        
     }
-    #informationVideoBorder {
-        margin-left: 19px;
-        margin-bottom: 15px;
-        border-radius:15px;
-        opacity:1.0;
-        margin-right: 0px;
-        border-bottom-color: #33cd5f;
-        border-top-color: #33cd5f;
-        border-left-color: #33cd5f;
-        border-right-color: #33cd5f; 
-        border-width: 7px;
-        border-style: solid;
-    }
-    #informationDealRightIcon {
-        margin-left: 85%;
-        font-size: 20px;
-        color: #33cd5f;
-    }
-    #informationDealText {
-        font-size: 24px;
-        color: white;
-        font-size: 140px;
-        text-align: center;
-        margin-top: 40%;
-        margin-bottom: 40px;
-    }
-    #informationDealListCard {
-        border-radius:15px;
-        opacity:1.0;
-        margin-right: 10px;
-        border-bottom-color: #33cd5f;
-        border-top-color: #33cd5f;
-        border-left-color: #33cd5f;
-        border-right-color: #33cd5f;
-        border-width: 5px;
-        border-style: solid;
-        
-				}
-    #informationDescriptionFont {
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 13px;
-    }
-    #informationDescriptionBorder {
-        background: white;
-        border: solid white;
-        border-style: solid;
-        border-width: 18px;
-        border-top-color: #08b124;
-        border-bottom-color: #08b124;
-        opacity: 0.9;
-    }
-
-    #informationFavoriteButton {
-        border-radius: 5px;
-        height: 40px;
-        width: 41%;
-        margin-left: 55%;
-        border-bottom-color: #33cd5f;
-        border-top-color: #33cd5f;
-        border-left-color: #33cd5f;
-        border-right-color: #33cd5f;
-        border-width: 3px;
-    }
-    #informationFavoriteButtonText {
-        font-size: 12px;
-        position: relative;
-        bottom: 10px;
-        
-    }	
-    #informationFavoriteIconStar{
-        font-size: 200%;
-    }
-    #informationLikeLinkText{
-        font-size: 13px;
-        position: relative;
-        bottom: 10px;
-    }
-    #informationLikeLinkIcon {
-        font-size: 200%;
-    }
-    #informationLike {
-        border-radius: 5px;
-        height: 40px;
-        width: 30%;
-        top: -9px;
-        margin-bottom: -50px;
-        margin-left: 10px;
-        margin-right: 0px;
-        border-bottom-color: #33cd5f;
-        border-top-color: #33cd5f;
-        border-left-color: #33cd5f;
-        border-right-color: #33cd5f;
-        border-width: 3px;
-    }
-    #informationAddress {
-        background: black;
-        opacity: 0.8;
-        margin-bottom: 2px;
-        margin-top: -35px;
-        height: 30px;
-        text-align: center;
-    }
-    #informationTitleH3 {
-        background: black;
-        opacity: 0.7;
-        margin-bottom: -37px;
-        text-align: center;
-    }
-    #loginBeerIcon {
-        margin-top: 5%;
-        font-size: 1200%;
-    }
-    #registerPersonIcon {
-        margin-top: 5%;
-        font-size: 1200%
-    }
-    #forgotInfiniteIcon {
-        margin-top: 5%;
-        font-size: 1200%
-    }
-    #backgroundColor {
-        background: url(../img/480x800.png);
-        
-    }
-}
-/*******************************************************************************/
-/* ----- This effects only tablets ----- */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/** Error Messages **/
-
-/** Styling for the username field **/
-label.item.has-error {
-  border-bottom: 2px solid red;
-}
-
-/** Styling for the password field when an error exists**/
-label.item.has-error-lr {
-  border-bottom: 2px solid red;
-}
-
-/** Styling for the password field when an error has been resolved**/
-label.item.valid-lr {
-  border-left: 2px solid green;
-  border-right: 2px solid green;
-}
-
-/** Styling for the error text and container **/
-.form-errors {
-  margin: 5px 0
-}
-.form-error {
-  padding: 2px 0 2px 16px;
-  color: red;
 }
