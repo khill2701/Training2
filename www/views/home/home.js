@@ -8,7 +8,6 @@ angular.module('App').controller('homeController', function ($scope, $state, $io
         $scope.location = localStorage.getItem('location');
         // Default location
         if (!$scope.location) {
-            
             $scope.tag = '';
             $scope.display_location = 'North Carolina';
             $scope.location = 'north_carolina';
