@@ -1,0 +1,176 @@
+/* ----- This effects the following devices:
+          HTC J Butterfly, HTC One, HTC One Mini, Xiaomi Redmi 2A, HTC One X, HTC Sensation, 
+          HTC Sensation XE, Sony Xperia Z1, Sony Xperia Z, Huawei Ascend G6, 
+          Huawei Ascend Mate 2, Samsung Galaxy S5 Sport, Xiaomi Redmi 2, Lenovo K900,
+          Samsung Galaxy S5 Mini, Samsung Galaxy S5 Active, LG LG G2, Samsung Galaxy S5,
+          LG Nexus 4, LG Nexus 5, Xiaomi Redmi 1s, Sony Xperia S, Samsung Galaxy S4,
+          Xiaomi Mi Note Pro, LG Optimus G, LG Optimus G Pro, Samsung Galaxy S3,
+          Sony Xperia Ion, Xiaomi Mi Note, Xiaomi Mi4i, BlackBerry Bold 9900, Xiaomi Mi4,
+          Samsung Galaxy Round, Samsung Galaxy Note 2, Samsung Galaxy Note Edge, Samsung Galaxy Note 4,
+          Samsung Galaxy Note 3, Samsung Galaxy Note 1, Samsung Galaxy Nexus, Blackberry Leap, Xiaomi Mi3,
+          Samsung Galaxy Alpha, Xiaomi Mi2S, Xiaomi Mi2A, Pantech Vega R3, BlackBerry Z10, BlackBerry Z30,
+          Xiaomi Mi2, Motorola Moto G, Pantech Vega No. 6, Nokia X7, Nokia C5, Nokia C6, Nokia C7, Xiaomi HongMi,
+          Google Nexus 4, Google Nexus 5, ZTE Grand X, Samsung Galaxy S6, ZTE Grand S, Nokia N8, Amazon Fire Phone,
+          HTC Evo 3D, HTC Evo LTE 
+          ----- */
+@media screen and (min-width: 360px) and (max-width: 640px) {
+   ion-item[class] {
+        border-radius: 12px;
+        opacity: 0.7;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        margin-right: 50px;
+        margin-left: 10px;
+        padding-right: 82%;
+    }
+    #informationCommentIcon {
+        font-size: 150%;
+        margin-left: 15%;
+    }
+    #informationCommentText {
+        font-size: 14px;
+        position: relative;
+        bottom: 2px;
+        color: white;
+    }
+    #informationWebsiteLink {
+        border-radius:15px;
+        opacity:1.0;
+        margin-right: 10px;
+        margin-left: 10px;
+        border-bottom-color: #33cd5f;
+        border-top-color: #33cd5f;
+        border-left-color: #33cd5f;
+        border-right-color: #33cd5f;
+        border-width: 5px;
+        border-style: solid;
+        
+    }
+    #informationVideoBorder {
+        margin-left: 19px;
+        margin-bottom: 15px;
+        border-radius:15px;
+        opacity:1.0;
+        margin-right: 0px;
+        border-bottom-color: #33cd5f;
+        border-top-color: #33cd5f;
+        border-left-color: #33cd5f;
+        border-right-color: #33cd5f;
+        border-width: 7px;
+        border-style: solid;
+    }
+    #informationDealRightIcon {
+        margin-left: 85%;
+        font-size: 20px;
+        color: #33cd5f;
+    }
+    #informationDealText {
+        font-size: 24px;
+        color: white;
+        font-size: 140px;
+        text-align: center;
+        margin-top: 40%;
+        margin-bottom: 40px;
+    }
+    #informationDealListCard {
+        border-radius:15px;
+        opacity:1.0;
+        margin-right: 10px;
+        border-bottom-color: #33cd5f;
+        border-top-color: #33cd5f;
+        border-left-color: #33cd5f;
+        border-right-color: #33cd5f;
+        border-width: 5px;
+        border-style: solid;
+        
+				}
+    #informationDescriptionFont {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 13px;
+    }
+    #informationDescriptionBorder {
+        background: white;
+        border: solid white;
+        border-style: solid;
+        border-width: 18px;
+        border-top-color: #08b124;
+        border-bottom-color: #08b124;
+        opacity: 0.9;
+    }
+    #informationFavoriteButton {
+        border-radius: 5px;
+        height: 40px;
+        width: 41%;
+        margin-left: 55%;
+        border-bottom-color: #33cd5f;
+        border-top-color: #33cd5f;
+        border-left-color: #33cd5f;
+        border-right-color: #33cd5f;
+        border-width: 3px;
+    }
+    #informationFavoriteButtonText {
+        font-size: 14px;
+        position: relative;
+        bottom: 2px;
+        color: white;
+        
+    }
+    
+    #informationFavoriteIconStar{
+        font-size: 150%;
+        margin: 0 0 0 15%;
+        
+    }
+    #informationLikeLinkText{
+        font-size: 14px;
+        position: relative;
+        bottom: 2px;
+        color: white;
+    }
+    
+    #informationLikeLinkIcon {
+        font-size: 150%;
+        margin: 0 0 0 7%;
+        
+    }
+    #informationLike {
+        
+        height: 40px;
+        width: 30%;
+        top: -9px;
+        margin-bottom: -50px;
+        margin-left: 20px;
+        margin-right: 0px;
+        
+    }
+    #informationAddress {
+        background: black;
+        opacity: 0.8;
+        margin-bottom: 2px;
+        margin-top: -35px;
+        height: 30px;
+        text-align: center;
+    }
+    #informationTitleH3 {
+        background: black;
+        opacity: 0.7;
+        margin-bottom: -9%;
+        text-align: center;
+    }
+    #loginBeerIcon {
+        margin-top: 5%;
+        font-size: 700%;
+    }
+    #registerPersonIcon {
+        margin-top: 5%;
+        font-size: 700%
+    }
+    #forgotInfiniteIcon {
+        margin-top: 5%;
+        font-size: 700%
+    }
+    #backgroundColor {
+        /*background: url(../img/480x800.png);*/
+        background-color: red;
+    }
+}
