@@ -1,13 +1,8 @@
 'use strict';
-angular.module('App').controller('homeController', function ($scope, $state, $ionicSideMenuDelegate, $cordovaOauth, $localStorage, $firebaseArray, $location, $http, $ionicPopup, $firebaseObject, Auth, FURL, Utils, $ionicHistory) {
-
-    $scope.$on('$ionicView.beforeEnter', function () {
-        Utils.show();
-
-
-    });
-
+angular.module('App').controller('homeController', function ($scope, $state, $ionicSideMenuDelegate, $cordovaOauth, $localStorage, $firebaseArray, $location, $http, $ionicPopup, $firebaseObject, Auth, FURL, Utils, $ionicHistory, $ionicLoading,$timeout) {
     $scope.$on('$ionicView.enter', function () {
+
+
         var ref = new Firebase(FURL);
         $scope.product;
         $scope.location = localStorage.getItem('location');
@@ -38,6 +33,20 @@ angular.module('App').controller('homeController', function ($scope, $state, $io
             localStorage.setItem('labelz', n);
 
         }
+        // Setup the loader
+        $ionicLoading.show({
+            content: 'Loading',
+            template: '<ion-spinner icon="bubbles"></ion-spinner>', //http://ionicframework.com/docs/api/directive/ionSpinner/
+            animation: 'fade-in',
+            showBackdrop: true,
+            maxWidth: 200,
+            showDelay: 0
+        });
+
+        // Set a timeout to clear loader, however you would actually call the $ionicLoading.hide(); method whenever everything is ready or loaded.
+        $timeout(function () {
+            $ionicLoading.hide();
+        }, 2500);
 
         $scope.goToFavorites = function () {
             $location.path("/favorites");
@@ -47,7 +56,18 @@ angular.module('App').controller('homeController', function ($scope, $state, $io
             Auth.logout();
             $location.path("/login");
         }
-
+        $scope.show = function () {
+            $ionicLoading.show({
+                template: 'Loading...'
+            }).then(function () {
+                console.log("The loading indicator is now displayed");
+            });
+        };
+        $scope.hide = function () {
+            $ionicLoading.hide().then(function () {
+                console.log("The loading indicator is now hidden");
+            });
+        };
         $scope.goBack = function () {
             $ionicHistory.goBack();
         }
@@ -56,9 +76,8 @@ angular.module('App').controller('homeController', function ($scope, $state, $io
         }
     });
 
-    $scope.$on('$ionicView.afterEnter', function () {
-        Utils.hide();
 
-    });
 
-});
+
+}
+);
