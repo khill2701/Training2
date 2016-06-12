@@ -1,8 +1,13 @@
 'use strict';
 angular.module('App').controller('homeController', function ($scope, $state, $ionicSideMenuDelegate, $cordovaOauth, $localStorage, $firebaseArray, $location, $http, $ionicPopup, $firebaseObject, Auth, FURL, Utils, $ionicHistory) {
+
+    $scope.$on('$ionicView.beforeEnter', function () {
+        Utils.show();
+
+
+    });
+
     $scope.$on('$ionicView.enter', function () {
-
-
         var ref = new Firebase(FURL);
         $scope.product;
         $scope.location = localStorage.getItem('location');
@@ -51,8 +56,9 @@ angular.module('App').controller('homeController', function ($scope, $state, $io
         }
     });
 
+    $scope.$on('$ionicView.afterEnter', function () {
+        Utils.hide();
 
+    });
 
-
-}
-);
+});
