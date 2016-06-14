@@ -7500,7 +7500,7 @@ div.description{
     font-family: 'tahoma';  
     font-size:15px;  
     color:white;  
-    opacity:0.6; /* transparency */  
+    opacity:0.8; /* transparency */  
     filter:alpha(opacity=60); /* IE transparency */  
 }  
 p.description_door_cost{  
