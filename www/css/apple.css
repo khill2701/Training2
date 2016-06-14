@@ -1,4 +1,13 @@
 /* ----- This will effect only 
+        iPhone 4 & 4s
+        iPod Touch 4
+        iPhone 3 GS ----- */
+@media screen  and (min-width: 320px) and (max-width: 480px) {
+    #backgroundColor {
+        background-color: red;
+    }
+}
+/* ----- This will effect only 
         iPad 1, 2, 3 & 4
         iPad Air 1 & 2
         iPad Mini 1, 2, & 3 ----- */
