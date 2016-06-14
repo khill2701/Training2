@@ -153,4 +153,45 @@ angular.module('App').controller('informationController', function ($scope, $sta
     return true;
 
   }
+
+  /**  Custom Code Begins From Here   **/  
+    var disqus_shortname = 'localhostabhishek';   		//shortname refers to the username you set on the  disqus site 
+    var disqus_identifier = "a"; 					 	// unique identififer for a particular disqus thread 
+    var disqus_url = 'http://localhost/';               // url to your source 
+	var disqus_config = function () { 
+	  this.language = "en";
+	};
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+	
+	// Checking  if DISQUS variable is defined or not , if not defined  load ember.js
+    if(!window.DISQUS)
+	{
+	  (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+       (document.head || document.body).appendChild(dsq);
+    })();
+    	
+		
+	}	
+	
+	/* * * Disqus Reset Function * * */
+	
+	/**   Reset Function  :  This Function is the main function whcih resets the disqus thread for different disqus_identifier  and  disqus_url  **/
+    $scope.reset = function (newIdentifier, newUrl, newTitle, newLanguage) {
+        DISQUS.reset({
+            reload: true,
+            config: function () {
+                this.page.identifier = newIdentifier;
+                this.page.url = newUrl;
+                this.page.title = newTitle;
+                this.language = newLanguage;
+            }
+        });
+		
+		 // window.location.href="#/app/playlists/"+newIdentifier;
+ 
+    };
+
+  
 });
