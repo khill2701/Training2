@@ -13,15 +13,15 @@
 
 
         <!-- end wrapper div -->
-        <div ng-repeat="i in data| filter: { tags: tag } " class='wrapper' id="homeImg">
+        <div hello ng-repeat="i in data| filter: { tags: tag } " class='wrapper' id="homeImg">
             <!-- wrapper div -->
             <!-- add address of information here!!!! -->
 
 
             <!-- image -->
             <a href="#/information">
-                <img class="ng-cloak" style="float:left; display:inline-block;overflow:hidden; border: 1px;" class="fill_image" src='{{ i.picture }}'
-                    style width="100%" style height="100%" ng-click="disableClick('{{ i.firebase_url }}')" />
+                <img class="ng-cloak" style="float:left; display:inline-block;overflow:hidden; border: 1px;" class="fill_image" ng-src='{{ i.picture || loading }}'
+                    style width="100%" style height="200" ng-click="disableClick('{{ i.firebase_url }}')" />
             </a>
 
             <!-- description div -->

@@ -5,57 +5,61 @@
 			<i class="icon ion-ios-arrow-back"> </i>
 		</button>
 	</ion-nav-buttons>
-	
+
 	<ion-content class="padding-top">
-		<div  class="padding" id="informationTitleH3">
+		<div class="padding" id="informationTitleH3">
 			<h3 id="informationTitleText" style="color: white;">{{data.title}}</h3>
 		</div>
 		<div>
 			<!-- Repeated three times because of the array in the controller-->
-			<img class="ng-cloak" class="fill_image" src='{{ data.picture }}' style width="100%" style height="100%" />
+			<img class="ng-cloak" class="fill_image" src='{{ data.picture }}' style width="100%" style height="200" />
 		</div>
 		<div class="padding" id="informationAddress">
 			<address id="informationAddressText" style="color: white;">{{data.address}}</address>
 		</div>
 		<br>
-	
-        
-			
 
-				<span  id="informationMarginLike" ng-if="searchLikes(data.firebase_url)" ng-click="removeLike(data.firebase_url)">
+
+
+
+		<span id="informationMarginLike" ng-if="searchLikes(data.firebase_url)" ng-click="removeLike(data.firebase_url)">
 				<i id="informationLikeLinkIcon" class="icon ion-thumbsup energized" ng-class="main.show_list === 'friends' ? 'icon ion-ios-star'" >
                     </i>
 				<span id="informationLikeLinkText">Like</span>
-				</span>
-				<span ng-if="!searchLikes(data.firebase_url)" ng-click="like(data.firebase_url)">
+		</span>
+		<span ng-if="!searchLikes(data.firebase_url)" ng-click="like(data.firebase_url)">
 				<i id="informationLikeLinkIcon" class="icon ion-thumbsup light" ng-class="main.show_list === 'friends' ? 'icon ion-ios-star'">
                     </i>
 				<span id="informationLikeLinkText">Like</span>
-				</span>
+		</span>
 
 
 
-<a>
-				<span ng-if="searchFavorites(data.title)" ng-click="removeFavorites(data.title)">
+		<a>
+			<span ng-if="searchFavorites(data.title)" ng-click="removeFavorites(data.title)">
 				<i id="informationFavoriteIconStar" class="icon ion-ios-star energized" ng-class="main.show_list === 'friends' ? 'icon ion-ios-star'" >
                     </i>
 				<span id="informationFavoriteButtonText">Favorite</span>
-				</span>
-				<span id="informationMarginFavorite"ng-if="!searchFavorites(data.title)" ng-click="favorites(data.title)">
+			</span>
+			<span id="informationMarginFavorite" ng-if="!searchFavorites(data.title)" ng-click="favorites(data.title)">
 				<i id="informationFavoriteIconStar" class="icon ion-ios-star light" ng-class="main.show_list === 'friends' ? 'icon ion-ios-star'">
                     </i>
 				<span id="informationFavoriteButtonText">Favorite</span>
-				</span>
-               <i id="informationCommentIcon"class="icon ion-chatbubble light"></i>
-               <a id="informationCommentText">Comment</a>
-			
-</a>
+			</span>
+			<i id="informationCommentIcon" class="icon ion-chatbubble light"></i>
+			<a id="informationCommentText">Comment</a>
+
+		</a>
 		<br><br>
 
 
 		<div id="informationDescriptionBorder">
 			<h3 id="informationDescriptTitle">Description:</h3>
-			<pre style="margin-bottom: 2%;"><pan class="inner-pre"><font id="informationDescriptionFont" face="times new roman">{{data.description}}</font></span></pre>
+			<pre style="margin-bottom: 2%;">
+				<pan class="inner-pre">
+					<font id="informationDescriptionFont" face="times new roman">{{data.description}}</font>
+					</span>
+			</pre>
 		</div>
 
 		<div class="list card" id="informationDealListCard">
@@ -86,18 +90,15 @@
 				</a>
 			</div>
 		</div>
-
-
+		
 		<br>
-
-
-
 
 		<a href="{{data.contact.web}}" class="item item-icon-left" id="informationWebsiteLink">
 			<i class="icon ion-earth"></i> Visit website
 		</a>
 		<br>
 		<iframe width="90%" height="315" src='{{trustSrc(data.youtube)}}' frameborder="0" allowfullscreen="false" id="informationVideoBorder"></iframe>
+		<div id="disqus_thread"></div>
 
 
 	</ion-content>

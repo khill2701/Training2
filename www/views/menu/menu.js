@@ -99,10 +99,17 @@ angular.module('App').controller('menuController', function ($scope, $ionicHisto
 
       $location.path('/home');
     }
+    $scope.sendEmail = function () {
+
+      window.open('mailto:test@example.com?subject=Share%20A%20Move&body=Name:%0AWebsite:%0AAddress:%0APhone%20Number:');
+
+    }
 
     $scope.logOut = function () {
       Auth.logout();
       $location.path('/login');
+      window.open('mailto:test@example.com');
+
     }
 
     $scope.moveItem = function (item, fromIndex, toIndex) {

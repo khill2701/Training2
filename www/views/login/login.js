@@ -3,7 +3,6 @@ angular.module('App').controller('loginController', function ($scope, $state,$co
   
   var ref = new Firebase(FURL);
   var userkey = "";
-  debugger;
   $scope.signIn = function (user) {
     console.log("Enviado");
     if(angular.isDefined(user)){
@@ -36,8 +35,7 @@ angular.module('App').controller('loginController', function ($scope, $state,$co
       });
 
       }, function(err) {
-        debugger;
-        Utils.hide();
+         Utils.hide();
          Utils.errMessage(err);
       });
     }
