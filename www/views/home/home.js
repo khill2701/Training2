@@ -1,7 +1,16 @@
 'use strict';
-angular.module('App').controller('homeController', function ($scope, $state, $ionicSideMenuDelegate, $cordovaOauth, $localStorage, $firebaseArray, $location, $http, $ionicPopup, $firebaseObject, Auth, FURL, Utils, $ionicHistory) {
+angular.module('App').controller('homeController', function ($scope, $state, $ionicSideMenuDelegate, $cordovaOauth, $localStorage, $firebaseArray, $location, $http, $ionicPopup, $firebaseObject, Auth, FURL, Utils, $ionicHistory, $ionicLoading, $timeout) {
     $scope.$on('$ionicView.enter', function () {
 
+        // Setup the loader
+        $ionicLoading.show({
+            content: 'Loading',
+            template: '<ion-spinner icon="bubbles"></ion-spinner>', //http://ionicframework.com/docs/api/directive/ionSpinner/
+            animation: 'fade-in',
+            showBackdrop: true,
+            maxWidth: 200,
+            showDelay: 0
+        });
 
         var ref = new Firebase(FURL);
         $scope.product;
@@ -34,6 +43,14 @@ angular.module('App').controller('homeController', function ($scope, $state, $io
 
         }
 
+        $scope.data.$loaded().then(function (data) {
+            // success
+            $ionicLoading.hide();
+        }).catch(function (error) {
+            // error
+            $ionicLoading.hide()
+        });
+
         $scope.goToFavorites = function () {
             $location.path("/favorites");
         }
@@ -54,5 +71,5 @@ angular.module('App').controller('homeController', function ($scope, $state, $io
 
 
 
-}
-);
+});
+
