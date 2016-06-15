@@ -6,7 +6,7 @@
 		</button>
 	</ion-nav-buttons>
 
-	<ion-content class="padding-top">
+	<ion-content class="padding-top"  data-tap-disabled="true" overflow-scroll="true" scroll="true">
 		<div class="padding" id="informationTitleH3">
 			<h3 id="informationTitleText" style="color: white;">{{data.title}}</h3>
 		</div>
@@ -46,11 +46,12 @@
                     </i>
 				<span id="informationFavoriteButtonText">Favorite</span>
 			</span>
-			<i id="informationCommentIcon" class="icon ion-chatbubble light"></i>
+			<i id="informationCommentIcon" class="icon ion-chatbubble light" ng-click="reset('{{playlist.id}}', 'http://localhost/{{playlist.id}}', 'Article Title {{playlist.id}}', 'en');toggleContent()"></i>
 			<a id="informationCommentText">Comment</a>
 
 		</a>
 		<br><br>
+		<div id="disqus_thread"></div>
 
 
 		<div id="informationDescriptionBorder">
@@ -98,7 +99,6 @@
 		</a>
 		<br>
 		<iframe width="90%" height="315" src='{{trustSrc(data.youtube)}}' frameborder="0" allowfullscreen="false" id="informationVideoBorder"></iframe>
-		<div id="disqus_thread"></div>
 
 
 	</ion-content>
