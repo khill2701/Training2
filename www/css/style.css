@@ -329,6 +329,8 @@ and (-webkit-device-pixel-ratio: ) {
 label.item.has-error {
   border-bottom: 2px solid red;
 }
+/**hide comment box**/
+html { overflow-y: scroll !important; }
 
 /** Styling for the password field when an error exists**/
 label.item.has-error-lr {
@@ -349,3 +351,4 @@ label.item.valid-lr {
   padding: 2px 0 2px 16px;
   color: red;
 }
+#disqus_thread { display:none;}

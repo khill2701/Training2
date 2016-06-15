@@ -188,10 +188,18 @@ angular.module('App').controller('informationController', function ($scope, $sta
                 this.language = newLanguage;
             }
         });
+      //  document.getElementById("disqus_thread").style.display="block" ; //to display comment box
 		
 		 // window.location.href="#/app/playlists/"+newIdentifier;
  
     };
 
-  
+  $scope.toggleContent= function() {
+  // Get the DOM reference
+  var contentId = document.getElementById("disqus_thread");
+  // Toggle 
+  contentId.style.display == "block" ? contentId.style.display = "none" : 
+contentId.style.display = "block"; 
+}
+
 });
