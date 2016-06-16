@@ -46,21 +46,27 @@
                     </i>
 				<span id="informationFavoriteButtonText">Favorite</span>
 			</span>
+<<<<<<< HEAD
 			<i id="informationCommentIcon" class="icon ion-chatbubble light" ng-click="reset('{{data.firebase_url}}', 'http://localhost/{{data.firebase_url}}', 'Article Title {{data.firebase_url}}', 'en');toggleContent()"></i>
 			<a id="informationCommentText">Comment</a>
+=======
+			<i id="informationCommentIcon" class="icon ion-chatbubble light"></i>
+			<a id="informationCommentText" ng-click="reset('{{playlist.id}}', 'http://localhost/{{playlist.id}}', 'Article Title {{playlist.id}}', 'en');toggleContent()">Comment</a>
+>>>>>>> refs/remotes/origin/master
 
 		</a>
 		<br><br>
-		<div id="disqus_thread"></div>
-
+        <div id="disqusBorder" style="background-color: white;">
+		<div id="disqus_thread" style="width: 100%;"></div>
+        </div>
 
 		<div id="informationDescriptionBorder">
 			<h3 id="informationDescriptTitle">Description:</h3>
-			<pre style="margin-bottom: 2%;">
+			<div id="informationDescriptionMargin">
 				<pan class="inner-pre">
 					<font id="informationDescriptionFont" face="times new roman">{{data.description}}</font>
 					</span>
-			</pre>
+			</div>
 		</div>
 
 		<div class="list card" id="informationDealListCard">
