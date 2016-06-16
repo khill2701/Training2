@@ -155,7 +155,8 @@ angular.module('App').controller('informationController', function ($scope, $sta
   }
 
   /**  Custom Code Begins From Here   **/  
-    var disqus_shortname = 'localhostabhishek';   		//shortname refers to the username you set on the  disqus site 
+ //   var disqus_shortname = 'localhostabhishek';   		//shortname refers to the username you set on the  disqus site 
+   var disqus_shortname = 'whatzthemove'; 
     var disqus_identifier = "a"; 					 	// unique identififer for a particular disqus thread 
     var disqus_url = 'http://localhost/';               // url to your source 
 	var disqus_config = function () { 
