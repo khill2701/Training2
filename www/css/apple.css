@@ -1,9 +1,9 @@
-/* ----- This will effect only 
+/* ----- This will effect only
         iPhone 4 & 4s
         iPod Touch 4
         iPhone 3 GS ----- */
 @media screen  and (min-width: 320px) and (max-width: 480px) {
-    ion-item[class] {
+   ion-item[class] {
         border-radius: 12px;
         opacity: 0.7;
         margin-top: 10px;
@@ -73,9 +73,17 @@
         border-style: solid;
         
 				}
+    #informationDescriptTitle{
+        margin-top: 5%;
+    }
     #informationDescriptionFont {
         font-family: Arial, Helvetica, sans-serif;
         font-size: 13px;
+        
+    }
+    #informationDescriptionMargin {
+        margin-bottom: 10%;
+        margin-top: 5%;
     }
     #informationDescriptionBorder {
         background: white;
@@ -306,6 +314,10 @@ and (max-width: 1024px) {
         font-size: 20px;
         margin-bottom: 50%;
     }
+    #informationDescriptionMargin {
+        margin-bottom: 5%;
+        margin-top: 5%;
+    }
     #informationDescriptTitle {
         font-size: 30px;
         margin-top: 2%;
@@ -420,6 +432,10 @@ and (-webkit-min-device-pixel-ratio: 3){
         font-family: Arial, Helvetica, sans-serif;
         font-size: 13px;
     }
+    #informationDescriptionMargin {
+        margin-bottom: 5%;
+        margin-top: 5%;
+    }
     #informationDescriptionBorder {
         background: white;
         border: solid white;
@@ -504,8 +520,16 @@ and (-webkit-min-device-pixel-ratio: 3){
     #backgroundColor2 {
         background-color: #e9ebee;
     }
-}
+
     #backgroundColor {
         background: url(../img/480x800.png);
+    }
+    #disqusBorder {
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-bottom: 10px;
+        border-right: 30px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }
