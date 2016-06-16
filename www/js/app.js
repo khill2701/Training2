@@ -48,7 +48,7 @@ angular.module('App', ['ionic', 'ngStorage', 'ngCordova', 'firebase', 'ngMessage
         controller: 'homeController'
       })
       ;
-    $urlRouterProvider.otherwise("/home"); //This is the launch page
+    $urlRouterProvider.otherwise("/login"); //This is the launch page
   })
   // Changue this for your Firebase App URL.
   .constant('FURL', 'https://resplendent-inferno-4023.firebaseio.com/')
