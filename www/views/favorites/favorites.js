@@ -3,9 +3,10 @@ angular.module('App').controller('favoritesController', function ($scope, $state
     var ref = new Firebase(FURL);
     $scope.product;
 
+        $scope.location = localStorage.getItem('location');
 
     // Get a reference to our posts
-    var ref = new Firebase("https://boiling-torch-5034.firebaseio.com/properties");
+    var ref = new Firebase("https://boiling-torch-5034.firebaseio.com/"+ $scope.location);
 
 
     /*Three-way data bindings are amazing for simple key / value data. However, there are many times when an array would be more practical, such as when managing a collection of messages. This is done using the $firebaseArray service.
