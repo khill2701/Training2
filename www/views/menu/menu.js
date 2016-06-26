@@ -101,7 +101,7 @@ angular.module('App').controller('menuController', function ($scope, $ionicHisto
     }
     $scope.sendEmail = function () {
 
-      window.open('mailto:test@example.com?subject=Share%20A%20Move&body=Name:%0AWebsite:%0AAddress:%0APhone%20Number:');
+      window.open('mailto:whatzthemoveapp@gmail.com?subject=Share%20A%20Move&body=Name:%0AWebsite:%0AAddress:%0APhone%20Number:');
 
     }
 
