@@ -1,5 +1,5 @@
 'Use Strict';
-angular.module('App', ['ionic', 'ngStorage', 'ngCordova', 'firebase', 'ngMessages'])
+angular.module('App', ['ionic', 'ngStorage', 'ngCordova', 'firebase', 'ngMessages', 'ngAnimate'])
   .config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
       .state('favorites', {
@@ -41,6 +41,11 @@ angular.module('App', ['ionic', 'ngStorage', 'ngCordova', 'firebase', 'ngMessage
         url: '/comments',
         templateUrl: 'views/comments/comments.html',
         controller: 'commentsController'
+      })
+      .state('welcome', {
+        url: '/welcome',
+        templateUrl: 'views/welcome/welcome.html',
+        controller: 'welcomeController'
       })
       .state('home', {
         url: '/home',

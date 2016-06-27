@@ -108,7 +108,7 @@ angular.module('App').controller('menuController', function ($scope, $ionicHisto
     $scope.logOut = function () {
       Auth.logout();
       $location.path('/login');
-      window.open('mailto:test@example.com');
+     
 
     }
 

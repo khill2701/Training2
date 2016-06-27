@@ -1,8 +1,14 @@
 'Use Strict';
 angular.module('App').controller('loginController', function ($scope, $state,$cordovaOauth, $localStorage, $location,$http,$ionicPopup, $firebaseObject, $window, Auth, FURL, Utils) {
   
+  
   var ref = new Firebase(FURL);
   var userkey = "";
+
+  $scope.openHome = function () {
+      $location.path('/home');
+    }
+
   $scope.signIn = function (user) {
     console.log("Enviado");
     if(angular.isDefined(user)){
