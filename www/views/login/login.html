@@ -1,44 +1,18 @@
-<ion-view view-title="Whatz The Move" hide-back-button="true" id="backgroundColor">
+<ion-view view-title="" hide-back-button="true" id="backgroundColor" hide-nav-bar="true" class="bubbles">
       <ion-content class="padding-top" scroll="false">
-          <div id="loginBeerIcon" class="list text-center padding">
-            <i class="icon ion-beer light"></i>
-          </div>
-          <form novalidate name="loginForm" ng-submit="loginForm.$valid && signIn(user)">
-          <div class="list">
-            <label class="item item-input item-floating-label" ng-class="{ 'has-error' : loginForm.txtemail.$invalid && loginForm.$submitted }" style="background-color: white;">
-              <span class="input-label">Email</span>
-              <input name="txtemail" type="email" ng-model="user.email" placeholder="Email"
-              ng-minlength="5"
-              ng-maxlength="30"
-              required>
-            </label>
-            <!-- Edit this messages if you want -->
-            <div class="form-errors" ng-messages="loginForm.txtemail.$error" ng-if="loginForm.$submitted">
-              <div class="form-error" ng-message="required">This field is required.</div>
-              <div class="form-error" ng-message="email">This field is must be an email.</div>
-              <div class="form-error" ng-message="minlength">This field is must be at least 5 characters.</div>
-              <div class="form-error" ng-message="maxlength">This field is must be less than 30 characters.</div>
-            </div>
-            <label class="item item-input item-floating-label" ng-class="{ 'has-error-lr' : loginForm.txtPassword.$invalid && loginForm.$submitted }" style="background-color: white;">
-              <span class="input-label">Password</span>
-              <input name="txtPassword" type="password" ng-model="user.password" placeholder="Password"
-              ng-minlength="5"
-              ng-maxlength="30"
-              required>
-            </label>
-            <!-- Edit this messages if you want -->
-            <div class="form-errors" ng-messages="loginForm.txtPassword.$error" ng-if="loginForm.$submitted">
-            <div class="form-error" ng-message="required">This field is required.</div>
-            <div class="form-error" ng-message="minlength">This field is must be at least 5 characters.</div>
-            <div class="form-error" ng-message="maxlength">This field is must be less than 30 characters.</div>
-            </div>
-          </div>
-          <div class="padding-top">
-            <input type="submit" class="button button-block button-balanced" value="Sign-In" style="border-radius: 20px;">
-            <p class="text-center padding-top">
-                <a href="#/forgot" class="button button-clear button-positive" style="color:white;">Forgot password</a>
-                <a href="#/register" class="button button-clear button-positive" style="color:white;">Register</a>
-          </div>
-        </form>
+        <link href="css/bubble.css" rel="stylesheet">
+          <p id="mainTitle" class="animated fadeInDown">Whatz The Move</p>
+          <img  class="animated infinite wobble" src="img/logo.png" style="width:104px; height:108px; margin-left: 127px; margin-bottom: 50px;" />
+          </br>
+          <a class="confirm_selection" style="color: white; margin-left: 82px;" ng-click="openHome()">Tap to begin your search now ><a>
+          <p style="color:white; text-align:center;margin-left: 220px; margin-top: 170px;">powered by:</p>
+          <p style="color:white; text-align:center;margin-left: 225px;">Hill Technologies</p>
+          <div id="bubbles">
+        <div class="bubble x1"></div>
+        <div class="bubble x2"></div>
+        <div class="bubble x3"></div>
+        <div class="bubble x4"></div>
+        <div class="bubble x5"></div>
+        </div>
         </ion-content>
 </ion-view>
