@@ -177,4 +177,28 @@
         /*background: url(../img/480x800.png);*/
         background: url(../img/768x1024.png);
     }
+    #mainTitle {
+        color: white;
+         font-size: 30px; 
+         font-weight:bold; 
+         text-align:center; 
+         margin-top: 180px; 
+         margin-bottom: 50px;
+    }
+
+ .confirm_selection {
+    animation: glow .9s infinite alternate;
+     color:white;
+     font-size: 15px;
+    
 }
+
+@keyframes glow {
+    to {
+        text-shadow: 0 0 20px lightblue;
+      
+        
+    }
+
+}
+
