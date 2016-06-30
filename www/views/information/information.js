@@ -11,7 +11,6 @@ angular.module('App').controller('informationController', function ($scope, $sta
   };
   //to storedata
   var hey = localStorage.getItem('labelz');
-  console.log(hey);
 
   // Get a reference to our posts
   var ref = new Firebase(hey);
@@ -39,8 +38,11 @@ angular.module('App').controller('informationController', function ($scope, $sta
   $scope.goBack = function () {
     $ionicHistory.goBack();
   }
-  $scope.deal_date = function (date) {
+  $scope.deal_date = function (date, url) {
     localStorage.setItem('deal_date', date);
+    localStorage.setItem('deal_url', url);
+
+
 
   }
 
@@ -58,7 +60,6 @@ angular.module('App').controller('informationController', function ($scope, $sta
     }
     //favorites.pop();
     localStorage.setItem('favoritesInfo', JSON.stringify(favorites));
-    console.log(localStorage.getItem('favoritesInfo'));
   }
 
 
@@ -72,14 +73,11 @@ angular.module('App').controller('informationController', function ($scope, $sta
       if (favorites[i] === yo) {
 
         favorites.splice(i, 1);
-        console.log("Yoooo");
 
-        console.log(favorites[i]);
       }
     }
     //favorites.pop();
     localStorage.setItem('favoritesInfo', JSON.stringify(favorites));
-    console.log(localStorage.getItem('favoritesInfo'));
   }
 
   $scope.searchFavorites = function (yo) {
@@ -91,7 +89,6 @@ angular.module('App').controller('informationController', function ($scope, $sta
     if (favorites.indexOf(yo) == -1) {
       return false;
     }
-    console.log(localStorage.getItem('favoritesInfo'));
     return true;
 
   }
@@ -112,7 +109,6 @@ angular.module('App').controller('informationController', function ($scope, $sta
     }
     //favorites.pop();
     localStorage.setItem('likeInfo', JSON.stringify(favorites));
-    console.log(localStorage.getItem('likeInfo'));
   }
 
   $scope.removeLike = function (yo) {
@@ -130,14 +126,11 @@ angular.module('App').controller('informationController', function ($scope, $sta
           return (current_value || 0) - 1;
         });
 
-        console.log("Yoooo");
 
-        console.log(favorites[i]);
       }
     }
     //favorites.pop();
     localStorage.setItem('likeInfo', JSON.stringify(favorites));
-    console.log(localStorage.getItem('likeInfo'));
   }
 
   $scope.searchLikes = function (yo) {
@@ -149,7 +142,6 @@ angular.module('App').controller('informationController', function ($scope, $sta
     if (favorites.indexOf(yo) == -1) {
       return false;
     }
-    console.log(localStorage.getItem('likeInfo'));
     return true;
 
   }
