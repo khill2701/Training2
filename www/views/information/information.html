@@ -71,7 +71,7 @@
 
 			<div ng-if="data.isDeal.thursday">
 				<!-- code to render the regular video block -->
-				<a href="#/weekly_deals" class="item item-icon-left" ng-click="deal_date('thursday')">
+				<a href="#/weekly_deals" class="item item-icon-left" ng-click="deal_date('thursday',data.firebase_url)">
 					<i class="icon ion-social-usd balanced"></i> Thursday Deals
 
 					<span class="icon ion-chevron-right" id="informationDealRightIcon"></span>
@@ -81,7 +81,7 @@
 			</div>
 			<div ng-if="data.isDeal.friday">
 				<!-- code to render the regular video block -->
-				<a href="#/weekly_deals" class="item item-icon-left" ng-click="deal_date('Friday')">
+				<a href="#/weekly_deals" class="item item-icon-left" ng-click="deal_date('friday',data.firebase_url)">
 					<i class="icon ion-social-usd balanced"></i> Friday Deals
 					<span class="icon ion-chevron-right" id="informationDealRightIcon"></span>
 				</a>
@@ -89,7 +89,7 @@
 
 			<div ng-if="data.isDeal.saturday">
 				<!-- code to render the regular video block -->
-				<a href="#/weekly_deals" class="item item-icon-left" ng-click="deal_date('saturday')">
+				<a href="#/weekly_deals" class="item item-icon-left" ng-click="deal_date('saturday',data.firebase_url)">
 					<i class="icon ion-social-usd balanced"></i> Saturday Deals
 					<span class="icon ion-chevron-right" id="informationDealRightIcon"></span>
 				</a>

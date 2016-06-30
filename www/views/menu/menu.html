@@ -17,7 +17,7 @@
       
 
           
-<label class = "item item-input item-select " style="margin-bottom: 5%;">
+<label class = "item item-input item-select " style="margin-bottom: 5%; ">
    <div class = "input-label ">
       Location
    </div>
@@ -25,7 +25,8 @@
   <select ng-model='form.type' required ng-options='option.value as option.name for option in typeOptions' ng-change="showSelectValue(form.type) "></select>
 
 </label>   
-
+<h1 style="color:white;font-family: Comic Sans MS; ">Set Your Move</h1>
+<p  style="color:white; ">____________________________________________________</p>
       <ion-list show-delete="data.showDelete " show-reorder="data.showReorder ">
           
         <ion-item class="item-icon-left " ng-click="openBars() "> 
@@ -57,8 +58,10 @@
            </div>
         </ion-item>
           
-        </br></br>
-        <ion-item class="item-icon-left " ng-click="sendEmail()"> 
+        </br>
+        <h1 style="color:white;font-family: Comic Sans MS; ">Settings</h1>
+<p  style="color:white; ">____________________________________________________</p>
+        <ion-item class="item-icon-left " ng-click="sendEmail() "> 
 
         E-Mail Us A Move!
            <div class="icon ">
