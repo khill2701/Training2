@@ -12,10 +12,10 @@ angular.module('App').controller('weekly_dealsController', function ($scope, $st
 
   //to storedata
   var hey = localStorage.getItem('deal_date');
-  console.log(hey);
+  var deal_url = localStorage.getItem('deal_url');
 
   // Get a reference to our posts
-  var ref = new Firebase("https://boiling-torch-5034.firebaseio.com/properties/09b3d83d-dc9d-4662-9d40-34889eb85ed1/deals/" + hey);
+  var ref = new Firebase(deal_url+"/deals/" + hey);
 
   /*Three-way data bindings are amazing for simple key / value data. However, there are many times when an array would be more practical, such as when managing a collection of messages. This is done using the $firebaseArray service.
   
