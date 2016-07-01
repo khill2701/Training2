@@ -185,20 +185,34 @@
          margin-top: 180px; 
          margin-bottom: 50px;
     }
+    #loginCompanyText{
+        color:white; 
+        text-align:center;
+        margin-left: 225px;
+    }
+    #loginPoweredText {
+        color:white; 
+        text-align:center;
+        margin-left: 220px; 
+        margin-top: 100px;
+    }
+    #loginLogo {
+        width:104px; 
+        height:108px; 
+        margin-left: 127px; 
+        margin-bottom: 50px;
+    }
 
- .confirm_selection {
+ #loginTapGlow {
     animation: glow .9s infinite alternate;
      color:white;
      font-size: 15px;
-    
-}
-
-@keyframes glow {
-    to {
-        text-shadow: 0 0 20px lightblue;
-      
-        
+     color: white;
+     margin-left: 82px;
     }
-
+    @keyframes glow {
+        to {
+        text-shadow: 0 0 20px white;   
+    }
 }
 
