@@ -5,7 +5,9 @@ angular.module('App').controller('menuController', function ($scope, $ionicHisto
     $scope.typeOptions = [
       { name: 'Atlanta, Ga', value: 'Atlanta, Ga' },
       { name: 'New Orleans, La', value: 'New Orleans, La' },
-      { name: 'Raleigh, Nc', value: 'Raleigh, Nc' }
+      { name: 'Raleigh, Nc', value: 'Raleigh, Nc' },
+      { name: 'Greensboro, Nc', value: 'Greensboro, Nc' }
+
     ];
     if (!localStorage.getItem('location')) {
 
@@ -31,6 +33,12 @@ angular.module('App').controller('menuController', function ($scope, $ionicHisto
 
         $scope.form = { type: $scope.typeOptions[2].value };
         localStorage.setItem('display_location', "Raleigh, Nc");
+
+        break;
+      case "greensboro_north_carolina":
+
+        $scope.form = { type: $scope.typeOptions[3].value };
+        localStorage.setItem('display_location', "Greensboro, Nc");
 
         break;
     }
@@ -59,6 +67,12 @@ angular.module('App').controller('menuController', function ($scope, $ionicHisto
           $scope.form = { type: $scope.typeOptions[2].value };
           localStorage.setItem('location', "north_carolina");
           localStorage.setItem('display_location', "Raleigh, Nc");
+          break;
+        case "Greensboro, Nc":
+
+          $scope.form = { type: $scope.typeOptions[3].value };
+          localStorage.setItem('location', "greensboro_north_carolina");
+          localStorage.setItem('display_location', "Greensboro, Nc");
           break;
       }
     }
@@ -108,7 +122,7 @@ angular.module('App').controller('menuController', function ($scope, $ionicHisto
     $scope.logOut = function () {
       Auth.logout();
       $location.path('/login');
-     
+
 
     }
 
