@@ -1,9 +1,14 @@
 'Use Strict';
-angular.module('App').controller('loginController', function ($scope, $state,$cordovaOauth, $localStorage, $location,$http,$ionicPopup, $firebaseObject, $window, Auth, FURL, Utils) {
+angular.module('App').controller('loginController', function ($scope, $timeout, $state,$cordovaOauth, $localStorage, $location,$http,$ionicPopup, $firebaseObject, $window, Auth, FURL, Utils) {
   
   
   var ref = new Firebase(FURL);
   var userkey = "";
+                    
+    $scope.delay = "";
+    $timeout(function(){
+         $scope.delay = "Tap to begin your search now >";
+             }, 5000);
 
   $scope.openHome = function () {
       $location.path('/home');

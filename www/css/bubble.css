@@ -63,10 +63,10 @@ body { overflow: hidden }
 }
 @-webkit-keyframes moveclouds { 
     0% { 
-        top: 900px;
+        top: 1000px;
     }
     100% { 
-        top: -500px;
+        top: -100px;
     }
 }
 
@@ -81,11 +81,11 @@ body { overflow: hidden }
 
 @-moz-keyframes moveclouds {     
     0% { 
-        top: 500px;
+        top: 900px;
     }
 
     100% { 
-        top: -500px;
+        top: -900px;
     }
 }
 
@@ -99,10 +99,10 @@ body { overflow: hidden }
 }
 @-o-keyframes moveclouds {
     0% { 
-        top: 500px;
+        top: 900px;
     }
     100% { 
-        top: -500px;
+        top: -900px;
     }
 }
 

@@ -2,7 +2,7 @@
         iPhone 4 & 4s
         iPod Touch 4
         iPhone 3 GS ----- */
-@media screen  and (min-width: 320px) and (max-width: 480px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
    ion-item[class] {
         border-radius: 12px;
         opacity: 0.7;
@@ -158,7 +158,49 @@
         font-size: 500%;
     }
     #backgroundColor {
-        background: url(../img/480x800.png);
+        background: url(../img/768x1024.png);
+    }
+    #mainTitle {
+        color: white;
+        font-size: 30px;
+        font-weight:bold;
+        text-align:center;
+        margin-top: 140px;
+        margin-bottom: 50px;
+    }
+    #loginCompanyText{
+        color:white;
+        text-align:center;
+        margin-left: 225px;
+    }
+    #loginPoweredText {
+        color:white;
+        text-align:center;
+        margin-left: 220px;
+        margin-top: 180px;
+    }
+    #loginLogo {
+        width:104px;
+        height:108px;
+        margin-left: 135px;
+        margin-bottom: 50px;
+    }
+    
+    
+    #loginTapGlow {
+        animation: glow .9s infinite alternate;
+        color:white;
+        font-size: 15px;
+        color: white;
+        margin-left: 80px;
+        animation-delay: 5s;
+        
+    }
+    @keyframes glow {
+        to {
+            text-shadow: 0 0 20px white;
+        }
+        
     }
 }
 /* ----- This will effect only 
@@ -166,8 +208,8 @@
         iPad Air 1 & 2
         iPad Mini 1, 2, & 3 ----- */
 @media screen
-and (min-width: 768px)
-and (max-width: 1024px) {
+and (min-device-width: 768px)
+and (max-device-width: 1024px) {
     ion-item[class] {
         border-radius: 12px;
         opacity: 0.7;
@@ -351,13 +393,58 @@ and (max-width: 1024px) {
     #homeImg {
         width: 100%;
     }
+    #mainTitle {
+        color: white;
+        font-size: 40px;
+        font-weight:bold;
+        text-align:center;
+        margin-top: 180px;
+        margin-bottom: 50px;
+    }
+    #loginCompanyText{
+        color:white;
+        text-align:center;
+        margin-left: 225px;
+        font-size:17px;
+    }
+    #loginPoweredText {
+        color:white;
+        text-align:center;
+        margin-left: 220px;
+        margin-top: 180px;
+        font-size:17px;
+
+    }
+    #loginLogo {
+        width:104px;
+        height:108px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 50px;
+    }
+    
+    
+    #loginTapGlow {
+        animation: glow .9s infinite alternate;
+        color:white;
+        font-size: 20px;
+        color: white;
+        animation-delay: 5s;
+        text-align: center;
+        margin-right: 10px;
+        
+    }
+    @keyframes glow {
+        to {
+            text-shadow: 0 0 20px white;
+        }
+        
+    }
 }
 /****************************************************/
 /* iphone 6 plus */
-@media screen
-and (min-device-width: 414px)
-and (max-device-width: 736px)
-and (-webkit-min-device-pixel-ratio: 3){
+@media only screen and (min-device-width: 414px)and (max-device-width: 414px){
     ion-item[class] {
         border-radius: 12px;
         opacity: 0.7;
@@ -532,4 +619,48 @@ and (-webkit-min-device-pixel-ratio: 3){
         padding-left: 10px;
         padding-right: 10px;
     }
+    #mainTitle {
+        color: white;
+        font-size: 30px;
+        font-weight:bold;
+        text-align:center;
+        margin-top: 180px;
+        margin-bottom: 50px;
+    }
+    #loginCompanyText{
+        color:white;
+        text-align:center;
+        margin-left: 225px;
+    }
+    #loginPoweredText {
+        color:white;
+        text-align:center;
+        margin-left: 220px;
+        margin-top: 180px;
+    }
+    #loginLogo {
+        width:104px;
+        height:108px;
+        margin-bottom: 50px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    #loginTapGlow {
+        animation: glow .9s infinite alternate;
+        color:white;
+        font-size: 15px;
+        color: white;
+        margin-left: 100px;
+        animation-delay: 5s;
+        
+    }
+    @keyframes glow {
+        to {
+            text-shadow: 0 0 20px white;
+        }
+        
+    }
+
 }
