@@ -13,7 +13,7 @@
           Google Nexus 4, Google Nexus 5, ZTE Grand X, Samsung Galaxy S6, ZTE Grand S, Nokia N8, Amazon Fire Phone,
           HTC Evo 3D, HTC Evo LTE 
           ----- */
-@media screen and (min-width: 360px) and (max-width: 640px) {
+@media only screen and (min-device-width: 360px) and (max-device-width: 640px) {
    ion-item[class] {
         border-radius: 12px;
         opacity: 0.7;
@@ -174,7 +174,7 @@
         font-size: 700%
     }
     #backgroundColor {
-        /*background: url(../img/480x800.png);*/
+        
         background: url(../img/768x1024.png);
     }
     #mainTitle {
