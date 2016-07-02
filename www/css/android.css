@@ -173,6 +173,18 @@
         margin-top: 5%;
         font-size: 700%
     }
+    #backgroundColor2{
+        background: linear-gradient(1deg, #00247d, #0049ff, #002070, #0043ec);
+background-size: 800% 800%;
+animation: AnimationName 60s ease infinite; }
+
+
+@keyframes AnimationName {
+    0%{background-position:96% 0%}
+    50%{background-position:5% 100%}
+    100%{background-position:96% 0%}
+}
+    }
     #backgroundColor {
         
         background: url(../img/768x1024.png);
