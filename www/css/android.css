@@ -174,10 +174,10 @@
         margin-top: 5%;
         font-size: 700%
     }
-    #backgroundColor2{
-        background: linear-gradient(1deg, #00247d, #0049ff, #002070, #0043ec);
-        background-size: 800% 800%;
-        animation: AnimationName 60s ease infinite; 
+    #backgroundColor2 {
+    background: linear-gradient(1deg, #0042b0, #8e00b7, #db8900);
+    background-size: 800% 800%;
+    animation: AnimationName 60s ease infinite;
 }
 
 
