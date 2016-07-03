@@ -2,7 +2,20 @@
         iPhone 4 & 4s
         iPod Touch 4
         iPhone 3 GS ----- */
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+@media only screen and (max-device-width: 320px) and (max-device-height: 480px) {
+   
+   #menuh1Title{
+       color: white;
+       font-size: 20px;
+       margin-left: 5%;
+       margin-top: 5%;
+   }
+   #menuh1Title2{
+       color: white;
+       font-size: 20px;
+       margin-left: 5%;
+       margin-bottom: 5%;
+   }
    ion-item[class] {
         border-radius: 12px;
         opacity: 0.7;
@@ -54,12 +67,12 @@
         color: #33cd5f;
     }
     #informationDealText {
-        font-size: 24px;
+        font-size: 20px;
         color: white;
         font-size: 140px;
         text-align: center;
-        margin-top: 40%;
-        margin-bottom: 40px;
+        margin-top: 20%;
+        margin-bottom: 20%;
     }
     #informationDealListCard {
         border-radius:15px;
@@ -162,35 +175,55 @@
     }
     #mainTitle {
         color: white;
-        font-size: 30px;
+        font-size: 20px;
         font-weight:bold;
         text-align:center;
-        margin-top: 140px;
+        margin-top: 100px;
         margin-bottom: 50px;
     }
     #loginCompanyText{
         color:white;
+        font-size: 12px;
         text-align:center;
-        margin-left: 225px;
+        margin-left: 215px;
     }
     #loginPoweredText {
         color:white;
+        font-size: 12px;
         text-align:center;
-        margin-left: 220px;
-        margin-top: 180px;
+        margin-left: 210px;
+        margin-top: 100px;
     }
     #loginLogo {
-        width:104px;
-        height:108px;
-        margin-left: 135px;
-        margin-bottom: 50px;
+        width:68px;
+        height:68px;
+        margin-left: 132px;
+        margin-bottom: 30px;
+    }
+    #disqusBorder {
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-bottom: 10px;
+        border-right: 30px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    #backgroundColor2 {
+        background: linear-gradient(1deg, #0042b0, #8e00b7, #db8900);
+        background-size: 800% 800%;
+        animation: AnimationName 60s ease infinite;
     }
     
     
+    @keyframes AnimationName {
+        0%{background-position:96% 0%}
+        50%{background-position:5% 100%}
+        100%{background-position:96% 0%}
+    }
     #loginTapGlow {
         animation: glow .9s infinite alternate;
         color:white;
-        font-size: 15px;
+        font-size: 12px;
         color: white;
         margin-left: 80px;
         animation-delay: 5s;
@@ -207,9 +240,20 @@
         iPad 1, 2, 3 & 4
         iPad Air 1 & 2
         iPad Mini 1, 2, & 3 ----- */
-@media screen
-and (min-device-width: 768px)
-and (max-device-width: 1024px) {
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    
+    #menuh1Title{
+        color: white;
+        font-size: 20px;
+        margin-left: 5%;
+        margin-top: 5%;
+    }
+    #menuh1Title2{
+        color: white;
+        font-size: 20px;
+        margin-left: 5%;
+        margin-bottom: 5%;
+    }
     ion-item[class] {
         border-radius: 12px;
         opacity: 0.7;
@@ -415,6 +459,18 @@ and (max-device-width: 1024px) {
         font-size:17px;
 
     }
+    #backgroundColor2 {
+        background: linear-gradient(1deg, #0042b0, #8e00b7, #db8900);
+        background-size: 800% 800%;
+        animation: AnimationName 60s ease infinite;
+    }
+    
+    
+    @keyframes AnimationName {
+        0%{background-position:96% 0%}
+        50%{background-position:5% 100%}
+        100%{background-position:96% 0%}
+    }
     #loginLogo {
         width:104px;
         height:108px;
@@ -444,7 +500,21 @@ and (max-device-width: 1024px) {
 }
 /****************************************************/
 /* iphone 6 plus */
-@media only screen and (min-device-width: 414px)and (max-device-width: 414px){
+
+@media screen and (min-device-width: 414px) and (max-device-width: 736px) {
+    
+    #menuh1Title{
+        color: white;
+        font-size: 20px;
+        margin-left: 5%;
+        margin-top: 5%;
+    }
+    #menuh1Title2{
+        color: white;
+        font-size: 20px;
+        margin-left: 5%;
+        margin-bottom: 5%;
+    }
     ion-item[class] {
         border-radius: 12px;
         opacity: 0.7;
@@ -500,8 +570,8 @@ and (max-device-width: 1024px) {
         color: white;
         font-size: 140px;
         text-align: center;
-        margin-top: 40%;
-        margin-bottom: 40px;
+        margin-top: 20%;
+        margin-bottom: 20%;
     }
     #informationDealListCard {
         border-radius:15px;
@@ -604,9 +674,6 @@ and (max-device-width: 1024px) {
         margin-top: 5%;
         font-size: 700%
     }
-    #backgroundColor2 {
-        background-color: #e9ebee;
-    }
 
     #backgroundColor {
         background: url(../img/480x800.png);
@@ -642,17 +709,16 @@ and (max-device-width: 1024px) {
         width:104px;
         height:108px;
         margin-bottom: 50px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
+        margin-left: 165px;
+            }
+    
 
     #loginTapGlow {
         animation: glow .9s infinite alternate;
         color:white;
         font-size: 15px;
         color: white;
-        margin-left: 100px;
+        margin-left: 110px;
         animation-delay: 5s;
         
     }
@@ -662,5 +728,500 @@ and (max-device-width: 1024px) {
         }
         
     }
+    #backgroundColor2 {
+        background: linear-gradient(1deg, #0042b0, #8e00b7, #db8900);
+        background-size: 800% 800%;
+        animation: AnimationName 60s ease infinite;
+    }
 
+
+    @keyframes AnimationName {
+        0%{background-position:96% 0%}
+        50%{background-position:5% 100%}
+        100%{background-position:96% 0%}
+    }
 }
+
+/*************************************************************/
+
+/*----- This only effects 
+        iphone 6            -----*/
+
+@media screen and (max-device-width: 375px) and (min-device-height: 667px){
+
+#menuh1Title{
+    color: white;
+    font-size: 20px;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+#menuh1Title2{
+    color: white;
+    font-size: 20px;
+    margin-left: 5%;
+    margin-bottom: 5%;
+}
+ion-item[class] {
+    border-radius: 12px;
+    opacity: 0.7;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-right: 50px;
+    margin-left: 10px;
+    padding-right: 78%;
+}
+#informationCommentIcon {
+    font-size: 150%;
+    margin-left: 15%;
+}
+#informationCommentText {
+    font-size: 14px;
+    position: relative;
+    bottom: 2px;
+    color: white;
+}
+#informationWebsiteLink {
+    border-radius:15px;
+    opacity:1.0;
+    margin-right: 10px;
+    margin-left: 10px;
+    border-bottom-color: #33cd5f;
+    border-top-color: #33cd5f;
+    border-left-color: #33cd5f;
+    border-right-color: #33cd5f;
+    border-width: 5px;
+    border-style: solid;
+    
+}
+#informationVideoBorder {
+    margin-left: 19px;
+    margin-bottom: 15px;
+    border-radius:15px;
+    opacity:1.0;
+    margin-right: 0px;
+    border-bottom-color: #33cd5f;
+    border-top-color: #33cd5f;
+    border-left-color: #33cd5f;
+    border-right-color: #33cd5f;
+    border-width: 7px;
+    border-style: solid;
+}
+#informationDealRightIcon {
+    margin-left: 85%;
+    font-size: 20px;
+    color: #33cd5f;
+}
+#informationDealText {
+    font-size: 24px;
+    color: white;
+    font-size: 140px;
+    text-align: center;
+    margin-top: 20%;
+    margin-bottom: 20%;
+}
+#informationDealListCard {
+    border-radius:15px;
+    opacity:1.0;
+    margin-right: 10px;
+    border-bottom-color: #33cd5f;
+    border-top-color: #33cd5f;
+    border-left-color: #33cd5f;
+    border-right-color: #33cd5f;
+    border-width: 5px;
+    border-style: solid;
+    
+}
+#informationDescriptionMargin {
+    margin-bottom: 10%;
+    margin-top: 5%;
+}
+#informationDescriptionFont {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+#informationDescriptionBorder {
+    background: white;
+    border: solid white;
+    border-style: solid;
+    border-width: 18px;
+    border-top-color: #08b124;
+    border-bottom-color: #08b124;
+    opacity: 0.9;
+}
+#informationFavoriteButton {
+    border-radius: 5px;
+    height: 40px;
+    width: 41%;
+    margin-left: 55%;
+    border-bottom-color: #33cd5f;
+    border-top-color: #33cd5f;
+    border-left-color: #33cd5f;
+    border-right-color: #33cd5f;
+    border-width: 3px;
+}
+#informationFavoriteButtonText {
+    font-size: 14px;
+    position: relative;
+    bottom: 2px;
+    color: white;
+    
+}
+
+#informationFavoriteIconStar{
+    font-size: 150%;
+    margin: 0 0 0 15%;
+    
+}
+#informationLikeLinkText{
+    font-size: 14px;
+    position: relative;
+    bottom: 2px;
+    color: white;
+}
+
+#informationLikeLinkIcon {
+    font-size: 150%;
+    margin: 0 0 0 7%;
+    
+}
+#informationLike {
+    
+    height: 40px;
+    width: 30%;
+    top: -9px;
+    margin-bottom: -50px;
+    margin-left: 20px;
+    margin-right: 0px;
+    
+}
+#informationAddress {
+    background: black;
+    opacity: 0.8;
+    margin-bottom: 2px;
+    margin-top: -35px;
+    height: 30px;
+    text-align: center;
+}
+#informationTitleH3 {
+    background: black;
+    opacity: 0.8;
+    margin-bottom: -10%;
+    text-align: center;
+}
+#loginBeerIcon {
+    margin-top: 5%;
+    font-size: 700%;
+}
+#registerPersonIcon {
+    margin-top: 5%;
+    font-size: 700%
+}
+#forgotInfiniteIcon {
+    margin-top: 5%;
+    font-size: 700%
+}
+#backgroundColor2 {
+    background: linear-gradient(1deg, #0042b0, #8e00b7, #db8900);
+    background-size: 800% 800%;
+    animation: AnimationName 60s ease infinite;
+}
+
+
+@keyframes AnimationName {
+    0%{background-position:96% 0%}
+    50%{background-position:5% 100%}
+    100%{background-position:96% 0%}
+}
+#backgroundColor {
+    
+    background: url(../img/768x1024.png);
+}
+#mainTitle {
+    color: white;
+    font-size: 30px;
+    font-weight:bold;
+    text-align:center;
+    margin-top: 180px;
+    margin-bottom: 50px;
+}
+#loginCompanyText{
+    color:white;
+    text-align:center;
+    margin-left: 225px;
+}
+#loginPoweredText {
+    color:white;
+    text-align:center;
+    margin-left: 220px;
+    margin-top: 100px;
+}
+#loginLogo {
+    width:104px;
+    height:108px;
+    margin-left: 140px;
+    margin-bottom: 50px;
+}
+#disqusBorder {
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    border-right: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#loginTapGlow {
+    animation: glow .9s infinite alternate;
+    color:white;
+    font-size: 15px;
+    color: white;
+    margin-left: 84px;
+}
+@keyframes glow {
+    to {
+        text-shadow: 0 0 20px white;
+    }
+}
+}
+
+/**************************************************/
+/*----- this will effect 
+        iphone 5 -----*/
+
+@media only screen and (max-device-width: 320px) and (min-device-height: 568px){
+    #menuh1Title{
+        color: white;
+        font-size: 20px;
+        margin-left: 5%;
+        margin-top: 5%;
+    }
+    #menuh1Title2{
+        color: white;
+        font-size: 20px;
+        margin-left: 5%;
+        margin-bottom: 5%;
+    }
+
+   ion-item[class] {
+        border-radius: 12px;
+        opacity: 0.7;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        margin-right: 50px;
+        margin-left: 10px;
+        padding-right: 76%;
+    }
+    #informationCommentIcon {
+        font-size: 140%;
+        margin-left: 14%;
+    }
+    #informationCommentText {
+        font-size: 12px;
+        position: relative;
+        bottom: 2px;
+        color: white;
+    }
+    #informationWebsiteLink {
+        border-radius:15px;
+        opacity:1.0;
+        margin-right: 10px;
+        margin-left: 10px;
+        border-bottom-color: #33cd5f;
+        border-top-color: #33cd5f;
+        border-left-color: #33cd5f;
+        border-right-color: #33cd5f;
+        border-width: 5px;
+        border-style: solid;
+        
+    }
+    #informationVideoBorder {
+        margin-left: 19px;
+        margin-bottom: 15px;
+        border-radius:15px;
+        opacity:1.0;
+        margin-right: 0px;
+        border-bottom-color: #33cd5f;
+        border-top-color: #33cd5f;
+        border-left-color: #33cd5f;
+        border-right-color: #33cd5f;
+        border-width: 7px;
+        border-style: solid;
+    }
+    #informationDealRightIcon {
+        margin-left: 85%;
+        font-size: 20px;
+        color: #33cd5f;
+    }
+    #informationDealText {
+        font-size: 24px;
+        color: white;
+        font-size: 140px;
+        text-align: center;
+        margin-top: 20%;
+        margin-bottom: 20%x;
+    }
+    #informationDealListCard {
+        border-radius:15px;
+        opacity:1.0;
+        margin-right: 10px;
+        border-bottom-color: #33cd5f;
+        border-top-color: #33cd5f;
+        border-left-color: #33cd5f;
+        border-right-color: #33cd5f;
+        border-width: 5px;
+        border-style: solid;
+        
+    }
+    #informationDescriptionMargin {
+        margin-bottom: 10%;
+        margin-top: 5%;
+    }
+    #informationDescriptionFont {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 13px;
+    }
+    #informationDescriptionBorder {
+        background: white;
+        border: solid white;
+        border-style: solid;
+        border-width: 18px;
+        border-top-color: #08b124;
+        border-bottom-color: #08b124;
+        opacity: 0.9;
+    }
+    #informationFavoriteButton {
+        border-radius: 5px;
+        height: 40px;
+        width: 41%;
+        margin-left: 55%;
+        border-bottom-color: #33cd5f;
+        border-top-color: #33cd5f;
+        border-left-color: #33cd5f;
+        border-right-color: #33cd5f;
+        border-width: 3px;
+    }
+    #informationFavoriteButtonText {
+        font-size: 12px;
+        position: relative;
+        bottom: 2px;
+        color: white;
+        
+    }
+    
+    #informationFavoriteIconStar{
+        font-size: 140%;
+        margin: 0 0 0 15%;
+        
+    }
+    #informationLikeLinkText{
+        font-size: 12px;
+        position: relative;
+        bottom: 2px;
+        color: white;
+    }
+    
+    #informationLikeLinkIcon {
+        font-size: 140%;
+        margin: 0 0 0 7%;
+        
+    }
+    #informationLike {
+        
+        height: 40px;
+        width: 30%;
+        top: -9px;
+        margin-bottom: -50px;
+        margin-left: 20px;
+        margin-right: 0px;
+        
+    }
+    #informationAddress {
+        background: black;
+        opacity: 0.8;
+        margin-bottom: 2px;
+        margin-top: -35px;
+        height: 30px;
+        text-align: center;
+    }
+    #informationTitleH3 {
+        background: black;
+        opacity: 0.8;
+        margin-bottom: -10%;
+        text-align: center;
+    }
+    #loginBeerIcon {
+        margin-top: 5%;
+        font-size: 700%;
+    }
+    #registerPersonIcon {
+        margin-top: 5%;
+        font-size: 700%
+    }
+    #forgotInfiniteIcon {
+        margin-top: 5%;
+        font-size: 700%
+    }
+    #backgroundColor2 {
+        background: linear-gradient(1deg, #0042b0, #8e00b7, #db8900);
+        background-size: 800% 800%;
+        animation: AnimationName 60s ease infinite;
+    }
+    
+    
+    @keyframes AnimationName {
+        0%{background-position:96% 0%}
+        50%{background-position:5% 100%}
+        100%{background-position:96% 0%}
+    }
+    #backgroundColor {
+        
+        background: url(../img/768x1024.png);
+    }
+    #mainTitle {
+        color: white;
+        font-size: 20px;
+        font-weight:bold;
+        text-align:center;
+        margin-top: 150px;
+        margin-bottom: 50px;
+    }
+    #loginCompanyText{
+        color:white;
+        font-size: 12px;
+        text-align:center;
+        margin-left: 215px;
+    }
+    #loginPoweredText {
+        color:white;
+        font-size: 12px;
+        text-align:center;
+        margin-left: 210px;
+        margin-top: 100px;
+    }
+    #loginLogo {
+        width:78px;
+        height:78px;
+        margin-left: 122px;
+        margin-bottom: 40px;
+    }
+    #disqusBorder {
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-bottom: 10px;
+        border-right: 30px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    #loginTapGlow {
+        animation: glow .9s infinite alternate;
+        color:white;
+        font-size: 12px;
+        color: white;
+        margin-left: 78px;
+    }
+    @keyframes glow {
+        to {
+            text-shadow: 0 0 20px white;
+        }
+    }
+    
+    }
