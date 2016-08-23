@@ -27,6 +27,29 @@ angular.module('App').controller('informationController', function ($scope, $sta
   // click on `index.html` above to see it used in the DOM!
   syncObject.$bindTo($scope, "data");
 
+  var clientIDs = {
+    "PayPalEnvironmentProduction": "YOUR_PRODUCTION_CLIENT_ID", // not needed while testing
+    "PayPalEnvironmentSandbox": "AaGnVAdQdrm9BWkzXai9r7I2JDhyQ1dIjeozgI7eOI0qbwPAjYrGGlRydesKuFQuKRZhnoLcEiO591s0"
+  };
+  window.PayPalMobile.init(
+    clientIDs,
+    onPayPalMobileInit // callback, configured below
+  );
+
+  function onPayPalMobileInit() {
+    window.PayPalMobile.prepareToRender(
+      "PayPalEnvironmentSandbox", // or "PayPalEnvironmentProduction" for production mode
+      new PayPalConfiguration({
+        // for more options see js/paypal-mobile-js-helper.js
+        merchantName: "Telerik Test Shop",
+        acceptCreditCards: true,
+        merchantPrivacyPolicyURL: "https://mytestshop.com/policy",
+        merchantUserAgreementURL: "https://mytestshop.com/agreement"
+      }),
+      function () { console.log("OK, ready to accept payments!") }
+    );
+  }
+
   $scope.redirectToGoogle = function () {
     $window.open('https://www.google.com', '_blank');
   };
@@ -45,6 +68,8 @@ angular.module('App').controller('informationController', function ($scope, $sta
 
 
   }
+
+
 
   $scope.goHome = function () {
     $location.path('/home');
@@ -167,6 +192,28 @@ angular.module('App').controller('informationController', function ($scope, $sta
 
   }
 
+  $scope.makePayments = function () {
+    var paymentDetails = new PayPalPaymentDetails(
+      "15.00", // subtotal (amount ex shipping and tax)
+      "3.00", // shipping
+      "2.00"  // tax
+    );
+
+    var payment = new PayPalPayment(
+      "7.00", // amount (the sum of the fields above)
+      "USD",   // currency (in ISO 4217 format)
+      "RSVP Ticket", // description of the payment
+      "Sale",  // Sale (immediate payment) or Auth (authorization only)
+      paymentDetails // the object prepared above, optional
+    );
+    window.PayPalMobile.renderSinglePaymentUI(
+      payment,
+      function (payment) { alert("payment success: " + JSON.stringify(payment)) },
+      function (errorresult) { alert(errorresult) }
+    );
+
+  }
+
   /* * * Disqus Reset Function * * */
 
   /**   Reset Function  :  This Function is the main function whcih resets the disqus thread for different disqus_identifier  and  disqus_url  **/
@@ -196,7 +243,12 @@ angular.module('App').controller('informationController', function ($scope, $sta
 
   $scope.sendEmail = function (title) {
 
-    window.open('mailto:whatzthemoveapp@gmail.com?subject='+ title +'&body=Name?%0AWebsite?%0AAddress?%0APhone%20Number?%0AOther?');
+    window.open('mailto:whatzthemoveapp@gmail.com?subject=' + title + '&body=Name?%0AWebsite?%0AAddress?%0APhone%20Number?%0AOther?');
+
+  }
+  $scope.callUber = function () {
+
+    window.open('https://m.uber.com/ul/?action=applyPromo&promo=brandonh5771ue', '_system', 'location=no');
 
   }
 

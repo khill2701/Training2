@@ -25,6 +25,7 @@
         padding-right: 78%;
     }
     #informationCommentIcon {
+        animation: glow .9s infinite alternate;
         font-size: 150%;
         margin-left: 15%;
     }
@@ -35,6 +36,19 @@
         color: white;
     }
     #informationWebsiteLink {
+        border-radius:15px;
+        opacity:1.0;
+        margin-right: 10px;
+        margin-left: 10px;
+        border-bottom-color: #33cd5f;
+        border-top-color: #33cd5f;
+        border-left-color: #33cd5f;
+        border-right-color: #33cd5f;
+        border-width: 5px;
+        border-style: solid;
+        
+    }
+    #callUber {
         border-radius:15px;
         opacity:1.0;
         margin-right: 10px;
