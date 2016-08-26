@@ -246,6 +246,11 @@ angular.module('App').controller('informationController', function ($scope, $sta
     window.open('mailto:whatzthemoveapp@gmail.com?subject=' + title + '&body=Name?%0AWebsite?%0AAddress?%0APhone%20Number?%0AOther?');
 
   }
+  $scope.infoEmail = function (title) {
+
+    window.open('mailto:whatzthemoveapp@gmail.com?subject=Share%20A%20Move&body=Name?%0AWebsite?%0AAddress?%0APhone%20Number?%0AOther?');
+
+  }
   $scope.callUber = function () {
 
     window.open('https://m.uber.com/ul/?action=applyPromo&promo=brandonh5771ue', '_system', 'location=no');

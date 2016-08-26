@@ -70,28 +70,36 @@
 
 		<div class="list card" id="informationDealListCard">
 
-			<div ng-if="data.isDeal.thursday">
+			<div ng-if="data.isDeal.thursday === 'true'>
 				<!-- code to render the regular video block -->
 				<a href="#/weekly_deals" class="item item-icon-left" ng-click="deal_date('thursday',data.firebase_url)">
-					<i class="icon ion-social-usd balanced"></i> Thursday Deals
+					<i class="icon ion-social-usd balanced"></i> Thursday Info
 
 					<span class="icon ion-chevron-right" id="informationDealRightIcon"></span>
 
 				</a>
 
 			</div>
-			<div ng-if="data.isDeal.friday">
+			<div ng-if="data.isDeal.friday === 'true'">
 				<!-- code to render the regular video block -->
 				<a href="#/weekly_deals" class="item item-icon-left" ng-click="deal_date('friday',data.firebase_url)">
-					<i class="icon ion-social-usd balanced"></i> Friday Deals
+					<i class="icon ion-social-usd balanced"></i> Friday Info
+					<span class="icon ion-chevron-right" id="informationDealRightIcon"></span>
+				</a>
+			</div>
+		
+			<div ng-if="data.isDeal.thursday === 'false' && data.isDeal.friday === 'false' && data.isDeal.saturday === 'false'">
+				<!-- code to render the regular video block -->
+				<a class="item item-icon-left">
+					<i class="icon ion-social-usd balanced"></i> No Info, Email Us!!
 					<span class="icon ion-chevron-right" id="informationDealRightIcon"></span>
 				</a>
 			</div>
 
-			<div ng-if="data.isDeal.saturday">
+			<div ng-if="data.isDeal.saturday === 'true'">
 				<!-- code to render the regular video block -->
 				<a href="#/weekly_deals" class="item item-icon-left" ng-click="deal_date('saturday',data.firebase_url)">
-					<i class="icon ion-social-usd balanced"></i> Saturday Deals
+					<i class="icon ion-social-usd balanced"></i> Saturday Info
 					<span class="icon ion-chevron-right" id="informationDealRightIcon"></span>
 				</a>
 			</div>
@@ -100,13 +108,13 @@
 		<br>
 
 		<a href="{{data.contact.web}}" class="item item-icon-left" id="informationWebsiteLink">
-			<i class="icon ion-earth"></i> Visit website
+			<i class="icon ion-earth"></i> Visit Website
 		</a>
 
 		<br>
 
 		<a ng-click="callUber()" class="item item-icon-left" id="callUber">
-			<i class="icon ion-android-car"></i> Call Uber
+			<i class="icon ion-android-car"></i> Need A Ride?
 		</a>
 
 		<br>
