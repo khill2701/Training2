@@ -50,7 +50,9 @@
 
 			<i id="informationCommentIcon" class="icon ion-fireball assertive "></i>
 			<!--<a id="informationCommentText" ng-click="reset('{{playlist.id}}', 'http://localhost/{{playlist.id}}', 'Article Title {{playlist.id}}', 'en');toggleContent()">Buy</a>-->
-			<a id="informationCommentText" ng-click="makePayments()">Promo Deal</a>
+			<!--<a id="informationCommentText" ng-click="makePayments()">Promo Deal</a> -->
+     		<a id="informationCommentText">Coming Soon</a>
+
 
 
 		</a>
@@ -70,7 +72,7 @@
 
 		<div class="list card" id="informationDealListCard">
 
-			<div ng-if="data.isDeal.thursday === 'true'>
+			<div ng-if="data.isDeal.thursday === 'true'">
 				<!-- code to render the regular video block -->
 				<a href="#/weekly_deals" class="item item-icon-left" ng-click="deal_date('thursday',data.firebase_url)">
 					<i class="icon ion-social-usd balanced"></i> Thursday Info
@@ -118,7 +120,10 @@
 		</a>
 
 		<br>
-		<iframe ng-if="data.youtube" width="90%" height="315" src='{{trustSrc(data.youtube)}}' frameborder="0" allowfullscreen="false"
+		
+		<iframe ng-if="!data.youtube" width="90%" height="315" src='https://www.youtube.com/embed/sVnYvlmc9oU' frameborder="0" allowfullscreen="false"
+			id="informationVideoBorder"></iframe>
+		<iframe ng-if="=data.youtube" width="90%" height="315" src='{{trustSrc(data.youtube)}}' frameborder="0" allowfullscreen="false"
 			id="informationVideoBorder"></iframe>
 
 
