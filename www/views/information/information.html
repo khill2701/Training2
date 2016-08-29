@@ -6,7 +6,7 @@
 		</button>
 	</ion-nav-buttons>
 
-	<ion-content class="padding-top"  data-tap-disabled="true" overflow-scroll="true" scroll="true">
+	<ion-content class="padding-top" data-tap-disabled="true" overflow-scroll="true" scroll="true">
 		<div class="padding" id="informationTitleH3">
 			<h3 id="informationTitleText" style="color: white;">{{data.title}}</h3>
 		</div>
@@ -48,15 +48,18 @@
 			</span>
 
 
-			<i id="informationCommentIcon" class="icon ion-chatbubble light"></i>
-			<a id="informationCommentText" ng-click="reset('{{playlist.id}}', 'http://localhost/{{playlist.id}}', 'Article Title {{playlist.id}}', 'en');toggleContent()">Comment</a>
+			<i id="informationCommentIcon" class="icon ion-fireball assertive "></i>
+			<!--<a id="informationCommentText" ng-click="reset('{{playlist.id}}', 'http://localhost/{{playlist.id}}', 'Article Title {{playlist.id}}', 'en');toggleContent()">Buy</a>-->
+			<!--<a id="informationCommentText" ng-click="makePayments()">Promo Deal</a> -->
+     		<a id="informationCommentText">Coming Soon</a>
+
 
 
 		</a>
 		<br><br>
-        <div id="disqusBorder" style="background-color: white;">
-		<div id="disqus_thread" style="width: 100%;"></div>
-        </div>
+		<div id="disqusBorder" style="background-color: white;">
+			<div id="disqus_thread" style="width: 100%;"></div>
+		</div>
 
 		<div id="informationDescriptionBorder">
 			<h3 id="informationDescriptTitle">Description:</h3>
@@ -69,40 +72,59 @@
 
 		<div class="list card" id="informationDealListCard">
 
-			<div ng-if="data.isDeal.thursday">
+			<div ng-if="data.isDeal.thursday === 'true'">
 				<!-- code to render the regular video block -->
 				<a href="#/weekly_deals" class="item item-icon-left" ng-click="deal_date('thursday',data.firebase_url)">
-					<i class="icon ion-social-usd balanced"></i> Thursday Deals
+					<i class="icon ion-social-usd balanced"></i> Thursday Info
 
 					<span class="icon ion-chevron-right" id="informationDealRightIcon"></span>
 
 				</a>
 
 			</div>
-			<div ng-if="data.isDeal.friday">
+			<div ng-if="data.isDeal.friday === 'true'">
 				<!-- code to render the regular video block -->
 				<a href="#/weekly_deals" class="item item-icon-left" ng-click="deal_date('friday',data.firebase_url)">
-					<i class="icon ion-social-usd balanced"></i> Friday Deals
+					<i class="icon ion-social-usd balanced"></i> Friday Info
+					<span class="icon ion-chevron-right" id="informationDealRightIcon"></span>
+				</a>
+			</div>
+		
+			<div ng-if="data.isDeal.thursday === 'false' && data.isDeal.friday === 'false' && data.isDeal.saturday === 'false'">
+				<!-- code to render the regular video block -->
+				<a class="item item-icon-left">
+					<i class="icon ion-social-usd balanced"></i> No Info, Email Us!!
 					<span class="icon ion-chevron-right" id="informationDealRightIcon"></span>
 				</a>
 			</div>
 
-			<div ng-if="data.isDeal.saturday">
+			<div ng-if="data.isDeal.saturday === 'true'">
 				<!-- code to render the regular video block -->
 				<a href="#/weekly_deals" class="item item-icon-left" ng-click="deal_date('saturday',data.firebase_url)">
-					<i class="icon ion-social-usd balanced"></i> Saturday Deals
+					<i class="icon ion-social-usd balanced"></i> Saturday Info
 					<span class="icon ion-chevron-right" id="informationDealRightIcon"></span>
 				</a>
 			</div>
 		</div>
-		
+
 		<br>
 
 		<a href="{{data.contact.web}}" class="item item-icon-left" id="informationWebsiteLink">
-			<i class="icon ion-earth"></i> Visit website
+			<i class="icon ion-earth"></i> Visit Website
 		</a>
+
 		<br>
-		<iframe ng-if="data.youtube" width="90%" height="315" src='{{trustSrc(data.youtube)}}' frameborder="0" allowfullscreen="false" id="informationVideoBorder"></iframe>
+
+		<a ng-click="callUber()" class="item item-icon-left" id="callUber">
+			<i class="icon ion-android-car"></i> Need A Ride?
+		</a>
+
+		<br>
+		
+		<iframe ng-if="!data.youtube" width="90%" height="315" src='https://www.youtube.com/embed/sVnYvlmc9oU' frameborder="0" allowfullscreen="false"
+			id="informationVideoBorder"></iframe>
+		<iframe ng-if="=data.youtube" width="90%" height="315" src='{{trustSrc(data.youtube)}}' frameborder="0" allowfullscreen="false"
+			id="informationVideoBorder"></iframe>
 
 
 	</ion-content>
@@ -125,7 +147,7 @@
 
 
 		<ion-footer-bar class="bar-balanced">
-        <span ng-click="sendEmail(data.title)"> 
+			<span ng-click="sendEmail(data.title)"> 
 
         Wrong Info?
 
